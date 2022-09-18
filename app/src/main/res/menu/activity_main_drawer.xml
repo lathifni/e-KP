@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_logbook"
+            android:icon="@drawable/ic_logbook"
+            android:title="@string/menu_logbook_harian"/>
+        <item
+            android:id="@+id/nav_daftar_instansi"
+            android:icon="@drawable/ic_instansi"
+            android:title="@string/menu_daftar_instansi" />
+        <item
+            android:id="@+id/nav_selesai_kp"
+            android:icon="@drawable/ic_mhs_selesai_kp"
+            android:title="@string/menu_laporan_mahasiswa" />
+    </group>
+</menu>

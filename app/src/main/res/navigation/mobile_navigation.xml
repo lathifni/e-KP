@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="id.ac.unand.e_kp.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_selesai_kp"
+        android:name="id.ac.unand.e_kp.ui.selesai_kp.SelesaiKPFragment"
+        android:label="@string/menu_laporan_mahasiswa"
+        tools:layout="@layout/fragment_selesai_kp" />
+    <fragment
+        android:id="@+id/nav_logbook"
+        android:name="id.ac.unand.e_kp.ui.logbook_harian.LogbookHarianFragment"
+        android:label="@string/menu_logbook_harian"
+        tools:layout="@layout/fragment_logbook_harian" />
+
+    <fragment
+        android:id="@+id/nav_daftar_instansi"
+        android:name="id.ac.unand.e_kp.ui.daftar_instansi.DaftarInstansiFragment"
+        android:label="@string/menu_daftar_instansi"
+        tools:layout="@layout/fragment_daftar_instansi" />
+</navigation>
