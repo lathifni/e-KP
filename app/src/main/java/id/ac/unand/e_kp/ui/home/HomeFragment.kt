@@ -5,15 +5,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import id.ac.unand.e_kp.Home
-import id.ac.unand.e_kp.MahasiswaKP
+import id.ac.unand.e_kp.DaftarMahasiswaKP
 import id.ac.unand.e_kp.UsulanKP
 //import androidx.lifecycle.ViewModelProvider
 import id.ac.unand.e_kp.databinding.FragmentHomeBinding
-import kotlin.concurrent.timerTask
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -33,7 +29,7 @@ class HomeFragment : Fragment() {
         }
 
         binding.button2.setOnClickListener {
-            val intent = Intent (this@HomeFragment.requireContext(), MahasiswaKP::class.java)
+            val intent = Intent (this@HomeFragment.requireContext(), DaftarMahasiswaKP::class.java)
             startActivity(intent)
         }
 
