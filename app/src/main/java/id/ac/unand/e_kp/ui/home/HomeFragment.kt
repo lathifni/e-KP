@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import id.ac.unand.e_kp.Home
+import id.ac.unand.e_kp.MahasiswaKP
 import id.ac.unand.e_kp.UsulanKP
 //import androidx.lifecycle.ViewModelProvider
 import id.ac.unand.e_kp.databinding.FragmentHomeBinding
@@ -28,6 +29,11 @@ class HomeFragment : Fragment() {
 
         binding.button4.setOnClickListener {
             val intent = Intent (this@HomeFragment.requireContext(), UsulanKP::class.java)
+            startActivity(intent)
+        }
+
+        binding.button2.setOnClickListener {
+            val intent = Intent (this@HomeFragment.requireContext(), MahasiswaKP::class.java)
             startActivity(intent)
         }
 
