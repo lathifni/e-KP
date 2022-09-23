@@ -1,10 +1,11 @@
 package id.ac.unand.e_kp
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.ui.AppBarConfiguration
 import id.ac.unand.e_kp.databinding.ActivityDaftarKpMahasiswaBinding
-import id.ac.unand.e_kp.databinding.ActivityUsulanKpBinding
 
 class DaftarMahasiswaKP : AppCompatActivity() {
 
@@ -22,10 +23,21 @@ class DaftarMahasiswaKP : AppCompatActivity() {
 
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeButtonEnabled(true)
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
         finish()
         return true
+    }
+
+    fun ke_seminar(view: View) {
+        val intent = Intent(this@DaftarMahasiswaKP, DetailSeminarKP::class.java)
+        startActivity(intent)
+    }
+
+    fun ke_persetujuannilai(view: View) {
+        val intent = Intent(this@DaftarMahasiswaKP, PersetujuanNilaiKP::class.java)
+        startActivity(intent)
     }
 }
