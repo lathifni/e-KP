@@ -28,12 +28,6 @@
         <activity
             android:name=".DetailUsulanKP"
             android:exported="false" />
-        <activity
-            android:name=".PersetujuanNilaiKP"
-            android:exported="false"/>
-        <activity
-            android:name=".DetailSeminarKP"
-            android:exported="false" />
 <!--        <activity-->
 <!--            android:name=".DaftarKP"-->
 <!--            android:exported="false" />-->
