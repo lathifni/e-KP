@@ -40,4 +40,14 @@ class DaftarMahasiswaKP : AppCompatActivity() {
         val intent = Intent(this@DaftarMahasiswaKP, PersetujuanNilaiKP::class.java)
         startActivity(intent)
     }
+
+    fun ke_konfirmasikp(view: View) {
+        val intent = Intent(this@DaftarMahasiswaKP, KonfirmasiBatalKP::class.java)
+        startActivity(intent)
+    }
+
+    fun ke_logbook(view: View) {
+        val intent = Intent(this@DaftarMahasiswaKP, LogbookKP::class.java)
+        startActivity(intent)
+    }
 }
