@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="main_kuning">#FDEEC5</color>
     <color name="abu_abu">#D9D9D9</color>
+    <color name="abu_abu_recycler_view">#E2DACC</color>
+    <color name="hijau">#45D700</color>
+    <color name="merah">#FF0000</color>
 </resources>
