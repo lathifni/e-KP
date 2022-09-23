@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:background="@color/main_kuning"
             app:popupTheme="@style/Theme.EKP.PopupOverlay"
-            app:title="Perstujuan Nilai KP">
+            app:title="Persetujuan Nilai KP">
 
             <TextView
                 android:layout_width="wrap_content"
