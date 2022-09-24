@@ -10,10 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import id.ac.unand.e_kp.DetailUsulanKP
-import id.ac.unand.e_kp.MyAdapter
-import id.ac.unand.e_kp.NamaMhs
-import id.ac.unand.e_kp.R
+import id.ac.unand.e_kp.*
 import id.ac.unand.e_kp.databinding.FragmentDaftarInstansiBinding
 import java.util.ArrayList
 
@@ -53,7 +50,7 @@ class DaftarInstansiFragment : Fragment() {
         recyclerView.adapter = adapter
 
         adapter.onItemClick = {
-            val intent = Intent(context, DetailUsulanKP::class.java)
+            val intent = Intent(context, ListInstansi::class.java)
             startActivity(intent )
         }
     }

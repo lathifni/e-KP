@@ -27,6 +27,7 @@
             android:background="@drawable/costum_button"
             android:backgroundTint="@color/abu_abu"
             android:text="Pembimbing KP"
+            android:onClick="ke_pembimbingkp"
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
