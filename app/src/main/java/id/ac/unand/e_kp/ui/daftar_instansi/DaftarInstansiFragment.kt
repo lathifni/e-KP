@@ -43,11 +43,11 @@ class DaftarInstansiFragment : Fragment() {
 
         mhsList = ArrayList()
 
-        mhsList.add(NamaMhs(R.drawable.ic_person, "Lathif Nur Irsyad", "2011523004"))
-        mhsList.add(NamaMhs(R.drawable.ic_person, "Daftar Instansi", "201152300"))
-        mhsList.add(NamaMhs(R.drawable.ic_person, "Lathif Nur Irsyad", "2011523009"))
-        mhsList.add(NamaMhs(R.drawable.ic_person, "Lathif Nur Irsyad", "2011523001"))
-        mhsList.add(NamaMhs(R.drawable.ic_person, "Lathif Nur Irsyad", "2011523004"))
+        mhsList.add(NamaMhs(R.drawable.ic_person2, "Lathif Nur Irsyad", "2011523004"))
+        mhsList.add(NamaMhs(R.drawable.ic_person2, "Daftar Instansi", "201152300"))
+        mhsList.add(NamaMhs(R.drawable.ic_person2, "Lathif Nur Irsyad", "2011523009"))
+        mhsList.add(NamaMhs(R.drawable.ic_person2, "Lathif Nur Irsyad", "2011523001"))
+        mhsList.add(NamaMhs(R.drawable.ic_person2, "Lathif Nur Irsyad", "2011523004"))
 
         adapter = MyAdapter(mhsList)
         recyclerView.adapter = adapter
