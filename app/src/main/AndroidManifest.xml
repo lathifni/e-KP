@@ -14,6 +14,9 @@
         android:theme="@style/Theme.EKP"
         tools:targetApi="31">
         <activity
+            android:name=".recycler_view_penilaian"
+            android:exported="false" />
+        <activity
             android:name=".LogbookKP"
             android:exported="false" />
         <activity
@@ -30,28 +33,26 @@
             android:exported="false" />
         <activity
             android:name=".PersetujuanNilaiKP"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".DetailSeminarKP"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".DaftarKP"-->
-<!--            android:exported="false" />-->
-<!--        <activity-->
-<!--            android:name=".daftar_kp"-->
-<!--            android:exported="false" />-->
-<!--        <activity-->
-<!--            android:name=".testing"-->
-<!--            android:exported="false" />-->
-<!--        <activity-->
-<!--            android:name=".test"-->
-<!--            android:exported="false" />-->
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".DaftarKP" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".daftar_kp" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".testing" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".test" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".DaftarMahasiswaKP"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".MahasiswaKP"-->
-<!--            android:exported="false" />-->
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".MahasiswaKP" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".UsulanKP"
             android:exported="false" />
