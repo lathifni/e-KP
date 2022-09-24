@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import id.ac.unand.e_kp.DaftarMahasiswaKP
+import id.ac.unand.e_kp.DetailKPMahasiswa
 import id.ac.unand.e_kp.UsulanKP
 //import androidx.lifecycle.ViewModelProvider
 import id.ac.unand.e_kp.databinding.FragmentHomeBinding
@@ -29,7 +30,7 @@ class HomeFragment : Fragment() {
         }
 
         binding.button2.setOnClickListener {
-            val intent = Intent (this@HomeFragment.requireContext(), DaftarMahasiswaKP::class.java)
+            val intent = Intent (this@HomeFragment.requireContext(), DetailKPMahasiswa::class.java)
             startActivity(intent)
         }
 
