@@ -1,11 +1,13 @@
 package id.ac.unand.e_kp.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
+import id.ac.unand.e_kp.DaftarMahasiswaKP
+import id.ac.unand.e_kp.UsulanKP
 //import androidx.lifecycle.ViewModelProvider
 import id.ac.unand.e_kp.databinding.FragmentHomeBinding
 
@@ -21,8 +23,19 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        binding.button4.setOnClickListener {
+            val intent = Intent (this@HomeFragment.requireContext(), UsulanKP::class.java)
+            startActivity(intent)
+        }
+
+        binding.button2.setOnClickListener {
+            val intent = Intent (this@HomeFragment.requireContext(), DaftarMahasiswaKP::class.java)
+            startActivity(intent)
+        }
+
         return root
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
