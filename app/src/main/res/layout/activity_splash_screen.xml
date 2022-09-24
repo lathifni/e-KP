@@ -9,11 +9,10 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="198dp"
-        android:layout_height="301dp"
-        android:layout_marginTop="72dp"
+        android:layout_width="147dp"
+        android:layout_height="224dp"
+        android:layout_marginTop="168dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_unand" />
@@ -22,13 +21,15 @@
         android:id="@+id/textView"
         android:layout_width="96dp"
         android:layout_height="50dp"
+        android:layout_marginTop="360dp"
         android:text="e-KP"
         android:textColor="@color/black"
         android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
