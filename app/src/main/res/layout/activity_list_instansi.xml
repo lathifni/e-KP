@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PembimbingKP">
-
+    tools:context=".ListInstansi">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -22,7 +21,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/main_kuning"
             app:popupTheme="@style/Theme.EKP.PopupOverlay"
-            app:title="Pembimbing KP">
+            app:title="List Instansi">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -35,21 +34,45 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="Nama Mahasiswa : ..."
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NIM Mahasiswa :..."
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.139" />
+
     <TextView
         android:layout_width="317dp"
         android:layout_height="31dp"
-        android:text="Silahkan pilih dosen pembimbing KP mahasiswa"
+        android:text="Silahkan konfirmasi pilihan instansi mahasiswa KP"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.17"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.121" />
+        app:layout_constraintVertical_bias="0.201" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="397dp"
-        android:layout_height="551dp"
+        android:layout_height="461dp"
         android:background="@drawable/costum_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,9 +81,9 @@
         app:layout_constraintVertical_bias="0.648">
 
         <RadioGroup
-            android:id="@+id/pilihanDosen"
+            android:id="@+id/pilihanInstansi"
             android:layout_width="356dp"
-            android:layout_height="507dp"
+            android:layout_height="407dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -69,28 +92,28 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dosen 1" />
+                android:text="Instansi 1" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dosen 2" />
+                android:text="Instansi 2" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dosen 3" />
+                android:text="Instansi 3" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dosen 4" />
+                android:text="Instansi 4" />
         </RadioGroup>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btnOK1"
+        android:id="@+id/btnOK2"
         android:src="@drawable/ic_baseline_check_24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

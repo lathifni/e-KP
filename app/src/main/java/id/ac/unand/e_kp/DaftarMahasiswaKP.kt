@@ -31,6 +31,11 @@ class DaftarMahasiswaKP : AppCompatActivity() {
         return true
     }
 
+    fun ke_pembimbingkp(view: View) {
+        val intent = Intent(this@DaftarMahasiswaKP, PembimbingKP::class.java)
+        startActivity(intent)
+    }
+
     fun ke_seminar(view: View) {
         val intent = Intent(this@DaftarMahasiswaKP, DetailSeminarKP::class.java)
         startActivity(intent)

@@ -3,18 +3,17 @@ package id.ac.unand.e_kp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.ui.AppBarConfiguration
-import id.ac.unand.e_kp.databinding.ActivityDetailSeminarKpBinding
+import id.ac.unand.e_kp.databinding.ActivityDetailLaporanKpBinding
 
-class DetailSeminarKP : AppCompatActivity() {
+class DetailLaporanKP : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private  lateinit var binding: ActivityDetailSeminarKpBinding
+    private  lateinit var binding: ActivityDetailLaporanKpBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_detail_seminar_kp)
-
-        binding = ActivityDetailSeminarKpBinding.inflate(layoutInflater)
+//        setContentView(R.layout.activity_detail_laporan_kp)
+        binding = ActivityDetailLaporanKpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar2)
@@ -26,4 +25,5 @@ class DetailSeminarKP : AppCompatActivity() {
         finish()
         return true
     }
+
 }

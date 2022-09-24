@@ -1,29 +1,21 @@
 package id.ac.unand.e_kp
 
-import android.os.Bundle
-import android.widget.Button
-import android.widget.RadioButton
-import android.widget.RadioGroup
-import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import id.ac.unand.e_kp.databinding.ActivityPembimbingKpBinding
+import android.os.Bundle
+import id.ac.unand.e_kp.databinding.ActivityListInstansiBinding
 
 
-class PembimbingKP : AppCompatActivity() {
+class ListInstansi : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_pembimbing_kp)
+//        setContentView(R.layout.activity_list_instansi)
 
-        var binding = ActivityPembimbingKpBinding.inflate(layoutInflater)
+        var binding = ActivityListInstansiBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeButtonEnabled(true)
-
-
-
     }
 
     override fun onSupportNavigateUp(): Boolean {
