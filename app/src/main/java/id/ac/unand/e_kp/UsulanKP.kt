@@ -35,8 +35,8 @@ class UsulanKP : AppCompatActivity(){
 
         mhsList = ArrayList()
 
-        mhsList.add(NamaMhs(R.drawable.ic_person2, "Lathif Nur Irsyad", "2011523004"))
-        mhsList.add(NamaMhs(R.drawable.ic_person2, "Lathif Nur Irsyad", "201152300"))
+        mhsList.add(NamaMhs(R.drawable.ic_person2, "Dzul Fauzi", "2011522001"))
+        mhsList.add(NamaMhs(R.drawable.ic_person2, "Ilham", "2011522019"))
         mhsList.add(NamaMhs(R.drawable.ic_person2, "Lathif Nur Irsyad", "2011523009"))
         mhsList.add(NamaMhs(R.drawable.ic_person2, "Lathif Nur Irsyad", "2011523001"))
         mhsList.add(NamaMhs(R.drawable.ic_person2, "Lathif Nur Irsyad", "2011523004"))
@@ -59,8 +59,8 @@ class UsulanKP : AppCompatActivity(){
         recyclerView = findViewById(R.id.recycler_view)
 
         var data = ArrayList<NamaMhs>()
-        data.add(NamaMhs(R.drawable.ic_person2, "Lathif Nur Irsyad", "2011523004"))
-        data.add(NamaMhs(R.drawable.ic_person2, "Lathif Nur Irsyad", "2011523005"))
+        data.add(NamaMhs(R.drawable.ic_person2, "Dzul Fauzi", "2011522001"))
+        data.add(NamaMhs(R.drawable.ic_person2, "Ilham", "2011522019"))
         data.add(NamaMhs(R.drawable.ic_person2, "Lathif Nur Irsyad", "2011523006"))
         data.add(NamaMhs(R.drawable.ic_person2, "Lathif Nur Irsyad", "2011523007"))
         data.add(NamaMhs(R.drawable.ic_person2, "Lathif Nur Irsyad", "2011523008"))
