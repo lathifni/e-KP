@@ -14,9 +14,6 @@
         android:theme="@style/Theme.EKP"
         tools:targetApi="31">
         <activity
-            android:name=".recycler_view_penilaian"
-            android:exported="false" />
-        <activity
             android:name=".LogbookKP"
             android:exported="false" />
         <activity
