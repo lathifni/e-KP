@@ -1,5 +1,6 @@
 package id.ac.unand.e_kp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.ui.AppBarConfiguration
@@ -32,6 +33,13 @@ class LogbookKP : AppCompatActivity() {
         recyclerView = findViewById(R.id.recycler_view6)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
+        val bundle : Bundle? = intent.extras
+        val nama = bundle!!.getString("nama")
+        val nim = bundle!!.getString("nim")
+
+        binding.textView15.text = nama
+        binding.textView16.text = nim
+
         mhsList = ArrayList()
 
         mhsList.add(NamaMhs(R.drawable.ic_logbook, "Mendiskusikan project", "20/09/2022"))
@@ -52,6 +60,12 @@ class LogbookKP : AppCompatActivity() {
 
         adapter = MyAdapter(mhsList)
         recyclerView.adapter = adapter
+
+        adapter.setOnItemClickListener(object : MyAdapter.onItemClickListener{
+            override fun onItemClick(position: Int) {
+
+            }
+        })
     }
 
     override fun onSupportNavigateUp(): Boolean {

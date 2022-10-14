@@ -49,10 +49,18 @@ class DaftarInstansiFragment : Fragment() {
         adapter = MyAdapter(mhsList)
         recyclerView.adapter = adapter
 
-        adapter.onItemClick = {
-            val intent = Intent(context, ListInstansi::class.java)
-            startActivity(intent )
-        }
+//        adapter.onItemClick = {
+//            val intent = Intent(context, ListInstansi::class.java)
+//            startActivity(intent )
+//        }
+        adapter.setOnItemClickListener(object : MyAdapter.onItemClickListener{
+            override fun onItemClick(position: Int) {
+                val intent = Intent(this@DaftarInstansiFragment.requireContext(), ListInstansi::class.java)
+//                intent.putExtra("nama", mhsList[position].txtTitle)
+//                intent.putExtra("nim", mhsList[position].txtSubTitle)
+                startActivity(intent)
+            }
+        })
     }
 
     override fun onDestroyView() {

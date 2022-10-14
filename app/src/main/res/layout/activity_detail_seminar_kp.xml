@@ -48,7 +48,7 @@
         app:srcCompat="@drawable/ic_mahasiswa" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/headingNamaDetailUsulan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -62,7 +62,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/headingNimDetailUsulan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="7.5dp"
@@ -72,11 +72,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/headingNamaDetailUsulan"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/textHeadingNama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="7.5dp"
@@ -86,11 +86,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/headingNimDetailUsulan"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textHeadingNim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="7.5dp"
@@ -100,7 +100,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textHeadingNama"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -113,7 +113,7 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textHeadingNim"
         tools:ignore="MissingConstraints" />
 
     <androidx.constraintlayout.widget.ConstraintLayout

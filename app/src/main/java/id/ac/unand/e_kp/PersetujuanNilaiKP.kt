@@ -41,6 +41,12 @@ class PersetujuanNilaiKP : AppCompatActivity() {
 
         adapter = MyAdapter(mhsList)
         recyclerView.adapter = adapter
+
+        adapter.setOnItemClickListener(object : MyAdapter.onItemClickListener{
+            override fun onItemClick(position: Int) {
+
+            }
+        })
     }
     override fun onSupportNavigateUp(): Boolean {
         finish()

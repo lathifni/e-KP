@@ -139,7 +139,7 @@
         app:srcCompat="@drawable/ic_mahasiswa" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/textHeadingNama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
@@ -152,7 +152,7 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textHeadingNim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="7.5dp"
@@ -162,7 +162,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textHeadingNama"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

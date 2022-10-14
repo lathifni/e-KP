@@ -24,6 +24,12 @@ class DaftarMahasiswaKP : AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeButtonEnabled(true)
 
+        val bundle : Bundle? = intent.extras
+        val nama = bundle!!.getString("nama")
+        val nim = bundle!!.getString("nim")
+
+        binding.textHeadingNama.text = nama
+        binding.textHeadingNim.text = nim
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -37,7 +43,12 @@ class DaftarMahasiswaKP : AppCompatActivity() {
     }
 
     fun ke_seminar(view: View) {
+        val bundle : Bundle? = intent.extras
+        val nama = bundle!!.getString("nama")
+        val nim = bundle!!.getString("nim")
         val intent = Intent(this@DaftarMahasiswaKP, DetailSeminarKP::class.java)
+        intent.putExtra("nama", nama)
+        intent.putExtra("nim", nim)
         startActivity(intent)
     }
 
@@ -47,12 +58,22 @@ class DaftarMahasiswaKP : AppCompatActivity() {
     }
 
     fun ke_konfirmasikp(view: View) {
+        val bundle : Bundle? = intent.extras
+        val nama = bundle!!.getString("nama")
+        val nim = bundle!!.getString("nim")
         val intent = Intent(this@DaftarMahasiswaKP, KonfirmasiBatalKP::class.java)
+        intent.putExtra("nama", nama)
+        intent.putExtra("nim", nim)
         startActivity(intent)
     }
 
     fun ke_logbook(view: View) {
+        val bundle : Bundle? = intent.extras
+        val nama = bundle!!.getString("nama")
+        val nim = bundle!!.getString("nim")
         val intent = Intent(this@DaftarMahasiswaKP, LogbookKP::class.java)
+        intent.putExtra("nama", nama)
+        intent.putExtra("nim", nim)
         startActivity(intent)
     }
 }

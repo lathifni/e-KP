@@ -30,6 +30,13 @@ class DetailSeminarKP : AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeButtonEnabled(true)
 
+        val bundle : Bundle? = intent.extras
+        val nama = bundle!!.getString("nama")
+        val nim = bundle!!.getString("nim")
+
+        binding.headingNamaDetailUsulan.text = nama
+        binding.headingNamaDetailUsulan.text = nim
+
         recyclerView = findViewById(R.id.recycler_view5)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -50,6 +57,12 @@ class DetailSeminarKP : AppCompatActivity() {
 
         adapter = MyAdapter(mhsList)
         recyclerView.adapter = adapter
+
+        adapter.setOnItemClickListener(object : MyAdapter.onItemClickListener{
+            override fun onItemClick(position: Int) {
+
+            }
+        })
     }
     override fun onSupportNavigateUp(): Boolean {
         finish()

@@ -31,8 +31,6 @@ class DetailKPMahasiswa : AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeButtonEnabled(true)
 
-//        init()
-
         recyclerView = findViewById(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -47,10 +45,19 @@ class DetailKPMahasiswa : AppCompatActivity() {
         adapter = MyAdapter(mhsList)
         recyclerView.adapter = adapter
 
-        adapter.onItemClick = {
-            val intent = Intent(this, DaftarMahasiswaKP::class.java)
-            startActivity(intent )
-        }
+//        adapter.onItemClick = {
+//            val intent = Intent(this, DaftarMahasiswaKP::class.java)
+//            startActivity(intent )
+//        }
+
+        adapter.setOnItemClickListener(object : MyAdapter.onItemClickListener{
+            override fun onItemClick(position: Int) {
+                val intent = Intent(this@DetailKPMahasiswa, DaftarMahasiswaKP::class.java)
+                intent.putExtra("nama", mhsList[position].txtTitle)
+                intent.putExtra("nim", mhsList[position].txtSubTitle)
+                startActivity(intent)
+            }
+        })
     }
 
     override fun onSupportNavigateUp(): Boolean {

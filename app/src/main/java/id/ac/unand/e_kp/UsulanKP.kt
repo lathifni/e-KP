@@ -44,10 +44,18 @@ class UsulanKP : AppCompatActivity(){
         adapter = MyAdapter(mhsList)
         recyclerView.adapter = adapter
 
-        adapter.onItemClick = {
-            val intent = Intent(this, DetailUsulanKP::class.java)
-            startActivity(intent )
-        }
+//        adapter.onItemClick = {
+//            val intent = Intent(this, DetailUsulanKP::class.java)
+//            startActivity(intent )
+//        }
+        adapter.setOnItemClickListener(object : MyAdapter.onItemClickListener{
+            override fun onItemClick(position: Int) {
+                val intent = Intent(this@UsulanKP, DetailUsulanKP::class.java)
+                intent.putExtra("nama", mhsList[position].txtTitle)
+                intent.putExtra("nim", mhsList[position].txtSubTitle)
+                startActivity(intent)
+            }
+        })
     }
 
     override fun onSupportNavigateUp(): Boolean {

@@ -24,7 +24,7 @@
             app:srcCompat="@drawable/ic_person" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/headingNamaDetailUsulan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
@@ -34,24 +34,24 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/headingNimDetailUsulan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
             android:layout_marginTop="20dp"
             android:text="NIM : 2011521001"
             app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+            app:layout_constraintTop_toBottomOf="@+id/headingNamaDetailUsulan" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/textHeadingNama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
             android:layout_marginTop="16dp"
             android:text="Lokasi : Multipolar"
             app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+            app:layout_constraintTop_toBottomOf="@+id/headingNimDetailUsulan" />
 
         <Button
             android:id="@+id/button5"

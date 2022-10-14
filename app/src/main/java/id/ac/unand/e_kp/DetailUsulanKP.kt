@@ -13,6 +13,12 @@ class DetailUsulanKP : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        val bundle : Bundle? = intent.extras
+        val nama = bundle!!.getString("nama")
+        val nim = bundle!!.getString("nim")
+
+        binding.headingNamaDetailUsulan.text = nama
+        binding.headingNimDetailUsulan.text = nim
     }
     override fun onSupportNavigateUp(): Boolean {
         finish()
