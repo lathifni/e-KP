@@ -12,4 +12,5 @@
     <color name="abu_abu_recycler_view">#E2DACC</color>
     <color name="hijau">#45D700</color>
     <color name="merah">#FF0000</color>
+    <color name="bg_item">#AABCFA</color>
 </resources>
