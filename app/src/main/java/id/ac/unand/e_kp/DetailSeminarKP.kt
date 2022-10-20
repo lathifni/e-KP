@@ -34,8 +34,8 @@ class DetailSeminarKP : AppCompatActivity() {
         val nama = bundle!!.getString("nama")
         val nim = bundle!!.getString("nim")
 
-        binding.headingNamaDetailUsulan.text = nama
-        binding.headingNamaDetailUsulan.text = nim
+        binding.headingNamaDetailUsulan.text ="Nama     : " + nama
+        binding.headingNimDetailUsulan.text = "NIM        : " + nim
 
         recyclerView = findViewById(R.id.recycler_view5)
         recyclerView.layoutManager = LinearLayoutManager(this)

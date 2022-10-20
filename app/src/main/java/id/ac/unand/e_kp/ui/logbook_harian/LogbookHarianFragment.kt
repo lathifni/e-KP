@@ -11,7 +11,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import id.ac.unand.e_kp.*
+import id.ac.unand.e_kp.adapter.MahasiswaAdapter
 import id.ac.unand.e_kp.databinding.FragmentLogbookHarianBinding
+import id.ac.unand.e_kp.models.Mahasiswa
 import java.util.ArrayList
 
 class LogbookHarianFragment : Fragment() {
@@ -20,8 +22,8 @@ class LogbookHarianFragment : Fragment() {
     private val binding get() = _binding!!
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var mhsList: ArrayList<NamaMhs>
-    private lateinit var adapter: MyAdapter
+    private lateinit var mhsList: ArrayList<Mahasiswa>
+    private lateinit var adapter: MahasiswaAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -40,24 +42,24 @@ class LogbookHarianFragment : Fragment() {
 
         mhsList = ArrayList()
 
-        mhsList.add(NamaMhs(R.drawable.ic_person2, "Ilham", "2011522019"))
-        mhsList.add(NamaMhs(R.drawable.ic_person2, "Dzul Fauzi", "2011521001"))
-        mhsList.add(NamaMhs(R.drawable.ic_person2, "Lathif Nur Irsyad", "2011523009"))
-        mhsList.add(NamaMhs(R.drawable.ic_person2, "Lathif Nur Irsyad", "2011523001"))
-        mhsList.add(NamaMhs(R.drawable.ic_person2, "Lathif Nur Irsyad", "2011523004"))
+        mhsList.add(Mahasiswa("Ilham", "2011522019"))
+        mhsList.add(Mahasiswa("Dzul Fauzi", "2011521001"))
+        mhsList.add(Mahasiswa("Lathif Nur Irsyad", "2011523009"))
+        mhsList.add(Mahasiswa("Lathif Nur Irsyad", "2011523001"))
+        mhsList.add(Mahasiswa("Lathif Nur Irsyad", "2011523004"))
 
-        adapter = MyAdapter(mhsList)
+        adapter = MahasiswaAdapter(mhsList)
         recyclerView.adapter = adapter
 
 //        adapter.onItemClick = {
 //            val intent = Intent(context, LogbookKP::class.java)
 //            startActivity(intent )
 //        }
-        adapter.setOnItemClickListener(object : MyAdapter.onItemClickListener{
+        adapter.setOnItemClickListener(object : MahasiswaAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
                 val intent = Intent(this@LogbookHarianFragment.requireContext(), LogbookKP::class.java)
-                intent.putExtra("nama", mhsList[position].txtTitle)
-                intent.putExtra("nim", mhsList[position].txtSubTitle)
+                intent.putExtra("nama", mhsList[position].nama)
+                intent.putExtra("nim", mhsList[position].nim)
                 startActivity(intent)
             }
         })
