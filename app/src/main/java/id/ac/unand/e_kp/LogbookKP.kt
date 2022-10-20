@@ -6,8 +6,10 @@ import android.os.Bundle
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import id.ac.unand.e_kp.adapter.LogbookAdapter
 import id.ac.unand.e_kp.databinding.ActivityKonfirmasiBatalKpBinding
 import id.ac.unand.e_kp.databinding.ActivityLogbookKpBinding
+import id.ac.unand.e_kp.models.Logbook
 import java.util.ArrayList
 
 class LogbookKP : AppCompatActivity() {
@@ -15,8 +17,8 @@ class LogbookKP : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private  lateinit var binding: ActivityLogbookKpBinding
     private lateinit var recyclerView: RecyclerView
-    private lateinit var mhsList: ArrayList<NamaMhs>
-    private lateinit var adapter: MyAdapter
+    private lateinit var mhsLogbook: ArrayList<Logbook>
+    private lateinit var adapter: LogbookAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,28 +42,29 @@ class LogbookKP : AppCompatActivity() {
         binding.textView15.text = nama
         binding.textView16.text = nim
 
-        mhsList = ArrayList()
+        mhsLogbook = ArrayList()
 
-        mhsList.add(NamaMhs(R.drawable.ic_logbook, "Mendiskusikan project", "20/09/2022"))
-        mhsList.add(NamaMhs(R.drawable.ic_logbook, "Meeting", "21/09/2022"))
-        mhsList.add(NamaMhs(R.drawable.ic_logbook, "Yoo Ndak Lah Kok Nanya Saya", "22/09/2022"))
-        mhsList.add(NamaMhs(R.drawable.ic_logbook, "Mendiskusikan project", "20/09/2022"))
-        mhsList.add(NamaMhs(R.drawable.ic_logbook, "Meeting", "21/09/2022"))
-        mhsList.add(NamaMhs(R.drawable.ic_logbook, "Yoo Ndak Lah Kok Nanya Saya", "22/09/2022"))
-        mhsList.add(NamaMhs(R.drawable.ic_logbook, "Mendiskusikan project", "20/09/2022"))
-        mhsList.add(NamaMhs(R.drawable.ic_logbook, "Meeting", "21/09/2022"))
-        mhsList.add(NamaMhs(R.drawable.ic_logbook, "Yoo Ndak Lah Kok Nanya Saya", "22/09/2022"))
-        mhsList.add(NamaMhs(R.drawable.ic_logbook, "Mendiskusikan project", "20/09/2022"))
-        mhsList.add(NamaMhs(R.drawable.ic_logbook, "Meeting", "21/09/2022"))
-        mhsList.add(NamaMhs(R.drawable.ic_logbook, "Yoo Ndak Lah Kok Nanya Saya", "22/09/2022"))
-        mhsList.add(NamaMhs(R.drawable.ic_logbook, "Mendiskusikan project", "20/09/2022"))
-        mhsList.add(NamaMhs(R.drawable.ic_logbook, "Meeting", "21/09/2022"))
-        mhsList.add(NamaMhs(R.drawable.ic_logbook, "Yoo Ndak Lah Kok Nanya Saya", "22/09/2022"))
+        mhsLogbook.add(Logbook("Mendiskusikan project", "20/09/2022"))
+        mhsLogbook.add(Logbook("Meeting", "21/09/2022"))
+        mhsLogbook.add(Logbook("Yoo Ndak Lah Kok Nanya Saya", "22/09/2022"))
+        mhsLogbook.add(Logbook("Mendiskusikan project", "20/09/2022"))
+        mhsLogbook.add(Logbook("Meeting", "21/09/2022"))
+        mhsLogbook.add(Logbook("Yoo Ndak Lah Kok Nanya Saya", "22/09/2022"))
+        mhsLogbook.add(Logbook("Mendiskusikan project", "20/09/2022"))
+        mhsLogbook.add(Logbook("Meeting", "21/09/2022"))
+        mhsLogbook.add(Logbook("Yoo Ndak Lah Kok Nanya Saya", "22/09/2022"))
+        mhsLogbook.add(Logbook("Mendiskusikan project", "20/09/2022"))
+        mhsLogbook.add(Logbook("Meeting", "21/09/2022"))
+        mhsLogbook.add(Logbook("Yoo Ndak Lah Kok Nanya Saya", "22/09/2022"))
+        mhsLogbook.add(Logbook("Mendiskusikan project", "20/09/2022"))
+        mhsLogbook.add(Logbook("Meeting", "21/09/2022"))
+        mhsLogbook.add(Logbook("Yoo Ndak Lah Kok Nanya Saya", "22/09/2022"))
 
-        adapter = MyAdapter(mhsList)
+
+        adapter = LogbookAdapter(mhsLogbook)
         recyclerView.adapter = adapter
 
-        adapter.setOnItemClickListener(object : MyAdapter.onItemClickListener{
+        adapter.setOnItemClickListener(object : LogbookAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
 
             }
@@ -72,17 +75,4 @@ class LogbookKP : AppCompatActivity() {
         finish()
         return true
     }
-
-//    private fun init(){
-//        recyclerView = findViewById(R.id.recycler_view6)
-//
-//        var data = ArrayList<NamaMhs>()
-//        data.add(NamaMhs(R.drawable.ic_person, "Lathif Nur Irsyad", "2011523004"))
-//        data.add(NamaMhs(R.drawable.ic_person, "Lathif Nur Irsyad", "2011523005"))
-//        data.add(NamaMhs(R.drawable.ic_person, "Lathif Nur Irsyad", "2011523006"))
-//        data.add(NamaMhs(R.drawable.ic_person, "Lathif Nur Irsyad", "2011523007"))
-//        data.add(NamaMhs(R.drawable.ic_person, "Lathif Nur Irsyad", "2011523008"))
-//
-//        adapter = MyAdapter(data)
-//    }
 }

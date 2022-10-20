@@ -22,8 +22,6 @@
             android:background="@color/main_kuning"
             app:popupTheme="@style/Theme.EKP.PopupOverlay"
             app:title="Logbook KP">
-
-
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
