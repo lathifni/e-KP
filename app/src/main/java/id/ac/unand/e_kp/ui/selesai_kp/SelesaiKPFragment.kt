@@ -11,7 +11,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import id.ac.unand.e_kp.*
+import id.ac.unand.e_kp.adapter.MahasiswaSelesaiAdapter
 import id.ac.unand.e_kp.databinding.FragmentSelesaiKpBinding
+import id.ac.unand.e_kp.models.MahasiswaSelesai
 import java.util.ArrayList
 
 class SelesaiKPFragment : Fragment() {
@@ -19,8 +21,8 @@ class SelesaiKPFragment : Fragment() {
     private val binding get() = _binding!!
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var mhsList: ArrayList<NamaMhs>
-    private lateinit var adapter: MyAdapter
+    private lateinit var mhsListSelesai: ArrayList<MahasiswaSelesai>
+    private lateinit var adapter: MahasiswaSelesaiAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,22 +39,22 @@ class SelesaiKPFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         recyclerView.layoutManager = LinearLayoutManager(context)
 
-        mhsList = ArrayList()
+        mhsListSelesai = ArrayList()
 
-        mhsList.add(NamaMhs(R.drawable.ic_person2, "Selesai KP", "2011523004"))
-        mhsList.add(NamaMhs(R.drawable.ic_person2, "Selesai KP", "201152300"))
-        mhsList.add(NamaMhs(R.drawable.ic_person2, "Selesai KP", "2011523009"))
-        mhsList.add(NamaMhs(R.drawable.ic_person2, "Selesai KP", "2011523001"))
-        mhsList.add(NamaMhs(R.drawable.ic_person2, "Selesai KP", "2011523004"))
+        mhsListSelesai.add(MahasiswaSelesai("Selesai KP", "2011523004"))
+        mhsListSelesai.add(MahasiswaSelesai("Selesai KP", "201152300"))
+        mhsListSelesai.add(MahasiswaSelesai("Selesai KP", "2011523009"))
+        mhsListSelesai.add(MahasiswaSelesai("Selesai KP", "2011523001"))
+        mhsListSelesai.add(MahasiswaSelesai("Selesai KP", "2011523004"))
 
-        adapter = MyAdapter(mhsList)
+        adapter = MahasiswaSelesaiAdapter(mhsListSelesai)
         recyclerView.adapter = adapter
 
 //        adapter.onItemClick = {
 //            val intent = Intent(context, DetailLaporanKP::class.java)
 //            startActivity(intent )
 //        }
-        adapter.setOnItemClickListener(object : MyAdapter.onItemClickListener{
+        adapter.setOnItemClickListener(object : MahasiswaSelesaiAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
                 val intent = Intent(this@SelesaiKPFragment.requireContext(), ListInstansi::class.java)
 //                intent.putExtra("nama", mhsList[position].txtTitle)

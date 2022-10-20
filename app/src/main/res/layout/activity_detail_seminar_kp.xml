@@ -56,7 +56,7 @@
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.06"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/AppBarLayout2"
         tools:ignore="MissingConstraints" />
@@ -70,8 +70,8 @@
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/headingNamaDetailUsulan"
         app:layout_constraintTop_toBottomOf="@+id/headingNamaDetailUsulan"
         tools:ignore="MissingConstraints" />
 
@@ -84,8 +84,8 @@
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/headingNimDetailUsulan"
         app:layout_constraintTop_toBottomOf="@+id/headingNimDetailUsulan"
         tools:ignore="MissingConstraints" />
 
@@ -98,8 +98,8 @@
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textHeadingNama"
         app:layout_constraintTop_toBottomOf="@+id/textHeadingNama"
         tools:ignore="MissingConstraints" />
 
