@@ -10,7 +10,6 @@ import id.ac.unand.e_kp.databinding.ActivityPersetujuanNilaiKpBinding
 import java.util.ArrayList
 
 class PersetujuanNilaiKP : AppCompatActivity() {
-
     private lateinit var appBarConfiguration: AppBarConfiguration
     private  lateinit var binding: ActivityPersetujuanNilaiKpBinding
     private lateinit var recyclerView: RecyclerView
@@ -19,13 +18,9 @@ class PersetujuanNilaiKP : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_persetujuan_nilai_kp)
-
         binding = ActivityPersetujuanNilaiKpBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setSupportActionBar(binding.toolbar3)
-
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeButtonEnabled(true)
 
@@ -44,7 +39,6 @@ class PersetujuanNilaiKP : AppCompatActivity() {
 
         adapter.setOnItemClickListener(object : MyAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
-
             }
         })
     }

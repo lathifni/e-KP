@@ -22,13 +22,9 @@ class LogbookKP : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_logbook_kp)
-
         binding = ActivityLogbookKpBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setSupportActionBar(binding.toolbar5)
-
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeButtonEnabled(true)
 
@@ -43,7 +39,6 @@ class LogbookKP : AppCompatActivity() {
         binding.textView16.text = nim
 
         mhsLogbook = ArrayList()
-
         mhsLogbook.add(Logbook("Mendiskusikan project", "20/09/2022"))
         mhsLogbook.add(Logbook("Meeting", "21/09/2022"))
         mhsLogbook.add(Logbook("Yoo Ndak Lah Kok Nanya Saya", "22/09/2022"))
@@ -66,7 +61,6 @@ class LogbookKP : AppCompatActivity() {
 
         adapter.setOnItemClickListener(object : LogbookAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
-
             }
         })
     }

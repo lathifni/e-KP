@@ -14,13 +14,10 @@ class DaftarMahasiswaKP : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_daftar_kp_mahasiswa)
 
         binding = ActivityDaftarKpMahasiswaBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setSupportActionBar(binding.toolbar1)
-
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeButtonEnabled(true)
 
@@ -38,7 +35,12 @@ class DaftarMahasiswaKP : AppCompatActivity() {
     }
 
     fun ke_pembimbingkp(view: View) {
+        val bundle : Bundle? = intent.extras
+        val nama = bundle!!.getString("nama")
+        val nim = bundle!!.getString("nim")
         val intent = Intent(this@DaftarMahasiswaKP, PembimbingKP::class.java)
+        intent.putExtra("nama", nama)
+        intent.putExtra("nim", nim)
         startActivity(intent)
     }
 

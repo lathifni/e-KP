@@ -61,10 +61,6 @@ class HomeFragment : Fragment() {
         adapter = MahasiswaAdapter(mhsList)
         recyclerView.adapter = adapter
 
-//        adapter.onItemClick = {
-//            val intent = Intent(context, LogbookKP::class.java)
-//            startActivity(intent )
-//        }
         adapter.setOnItemClickListener(object : MahasiswaAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
                 val intent = Intent(this@HomeFragment.requireContext(), LogbookKP::class.java)

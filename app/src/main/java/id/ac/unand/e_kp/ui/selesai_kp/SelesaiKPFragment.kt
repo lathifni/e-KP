@@ -50,10 +50,6 @@ class SelesaiKPFragment : Fragment() {
         adapter = MahasiswaSelesaiAdapter(mhsListSelesai)
         recyclerView.adapter = adapter
 
-//        adapter.onItemClick = {
-//            val intent = Intent(context, DetailLaporanKP::class.java)
-//            startActivity(intent )
-//        }
         adapter.setOnItemClickListener(object : MahasiswaSelesaiAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
                 val intent = Intent(this@SelesaiKPFragment.requireContext(), ListInstansi::class.java)

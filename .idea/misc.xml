@@ -26,7 +26,7 @@
         <entry key="..\:/Semester 5/Pemograman Teknologi Bergerak/e-KP/app/src/main/res/layout/activity_detail_usulan_kp.xml" value="0.17552083333333332" />
         <entry key="..\:/Semester 5/Pemograman Teknologi Bergerak/e-KP/app/src/main/res/layout/activity_home.xml" value="0.1259259259259259" />
         <entry key="..\:/Semester 5/Pemograman Teknologi Bergerak/e-KP/app/src/main/res/layout/activity_konfirmasi_batal_kp.xml" value="0.1259259259259259" />
-        <entry key="..\:/Semester 5/Pemograman Teknologi Bergerak/e-KP/app/src/main/res/layout/activity_logbook_kp.xml" value="0.264" />
+        <entry key="..\:/Semester 5/Pemograman Teknologi Bergerak/e-KP/app/src/main/res/layout/activity_logbook_kp.xml" value="0.1259259259259259" />
         <entry key="..\:/Semester 5/Pemograman Teknologi Bergerak/e-KP/app/src/main/res/layout/activity_login.xml" value="0.1259259259259259" />
         <entry key="..\:/Semester 5/Pemograman Teknologi Bergerak/e-KP/app/src/main/res/layout/activity_pembimbing_kp.xml" value="0.17552083333333332" />
         <entry key="..\:/Semester 5/Pemograman Teknologi Bergerak/e-KP/app/src/main/res/layout/activity_persetujuan_nilai_kp.xml" value="0.1259259259259259" />
@@ -37,8 +37,6 @@
         <entry key="..\:/Semester 5/Pemograman Teknologi Bergerak/e-KP/app/src/main/res/layout/fragment_home.xml" value="0.17552083333333332" />
         <entry key="..\:/Semester 5/Pemograman Teknologi Bergerak/e-KP/app/src/main/res/layout/fragment_logbook_harian.xml" value="0.1259259259259259" />
         <entry key="..\:/Semester 5/Pemograman Teknologi Bergerak/e-KP/app/src/main/res/layout/fragment_selesai_kp.xml" value="0.17552083333333332" />
-        <entry key="..\:/Semester 5/Pemograman Teknologi Bergerak/e-KP/app/src/main/res/layout/item_logbook.xml" value="0.4" />
-        <entry key="..\:/Semester 5/Pemograman Teknologi Bergerak/e-KP/app/src/main/res/layout/item_mahasiswa.xml" value="0.25" />
         <entry key="..\:/Semester 5/Pemograman Teknologi Bergerak/e-KP/app/src/main/res/layout/nav_header_home.xml" value="0.17552083333333332" />
         <entry key="..\:/Semester 5/Pemograman Teknologi Bergerak/e-KP/app/src/main/res/layout/recycler_view_penilaian.xml" value="0.22" />
         <entry key="..\:/Semester 5/Pemograman Teknologi Bergerak/e-KP/app/src/main/res/layout/recycler_view_template.xml" value="0.3333333333333333" />
@@ -58,9 +56,11 @@
         <entry key="..\:/Users/Icat/AndroidStudioProjects/eKP/app/src/main/res/layout/activity_detail_usulan_kp.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Icat/AndroidStudioProjects/eKP/app/src/main/res/layout/activity_home.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Icat/AndroidStudioProjects/eKP/app/src/main/res/layout/activity_konfirmasi_batal_kp.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/Icat/AndroidStudioProjects/eKP/app/src/main/res/layout/activity_list_instansi.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Icat/AndroidStudioProjects/eKP/app/src/main/res/layout/activity_logbook_kp.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Icat/AndroidStudioProjects/eKP/app/src/main/res/layout/activity_login.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Icat/AndroidStudioProjects/eKP/app/src/main/res/layout/activity_pembimbing_kp.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/Icat/AndroidStudioProjects/eKP/app/src/main/res/layout/activity_persetujuan_nilai_kp.xml" value="0.33" />
         <entry key="..\:/Users/Icat/AndroidStudioProjects/eKP/app/src/main/res/layout/activity_splash_screen.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Icat/AndroidStudioProjects/eKP/app/src/main/res/layout/activity_usulan_kp.xml" value="0.33" />
         <entry key="..\:/Users/Icat/AndroidStudioProjects/eKP/app/src/main/res/layout/app_bar_home.xml" value="0.38697916666666665" />
@@ -70,6 +70,7 @@
         <entry key="..\:/Users/Icat/AndroidStudioProjects/eKP/app/src/main/res/layout/fragment_logbook_harian.xml" value="0.33" />
         <entry key="..\:/Users/Icat/AndroidStudioProjects/eKP/app/src/main/res/layout/fragment_selesai_kp.xml" value="0.1875" />
         <entry key="..\:/Users/Icat/AndroidStudioProjects/eKP/app/src/main/res/layout/fragment_slideshow.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/Icat/AndroidStudioProjects/eKP/app/src/main/res/layout/item_dosen_pengampu.xml" value="0.3859375" />
         <entry key="..\:/Users/Icat/AndroidStudioProjects/eKP/app/src/main/res/layout/item_mahasiswa.xml" value="0.3859375" />
         <entry key="..\:/Users/Icat/AndroidStudioProjects/eKP/app/src/main/res/layout/nav_header_home.xml" value="0.25" />
         <entry key="..\:/Users/Icat/AndroidStudioProjects/eKP/app/src/main/res/layout/recycler_view_template.xml" value="0.5" />

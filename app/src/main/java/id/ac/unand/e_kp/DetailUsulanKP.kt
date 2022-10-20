@@ -12,7 +12,6 @@ class DetailUsulanKP : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailUsulanKpBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setSupportActionBar(binding.toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         val bundle : Bundle? = intent.extras

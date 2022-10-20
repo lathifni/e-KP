@@ -24,12 +24,8 @@ class DetailKPMahasiswa : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-//        setContentView(R.layout.activity_detail_kpmahasiswa)
-
         binding = ActivityDetailKpmahasiswaBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setSupportActionBar(binding.toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeButtonEnabled(true)
@@ -47,11 +43,6 @@ class DetailKPMahasiswa : AppCompatActivity() {
 
         adapter = MahasiswaAdapter(mhsList)
         recyclerView.adapter = adapter
-
-//        adapter.onItemClick = {
-//            val intent = Intent(this, DaftarMahasiswaKP::class.java)
-//            startActivity(intent )
-//        }
 
         adapter.setOnItemClickListener(object : MahasiswaAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {

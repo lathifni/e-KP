@@ -41,7 +41,6 @@ class DaftarInstansiFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(context)
 
         mhsList = ArrayList()
-
         mhsList.add(Mahasiswa("Daftar Instansi", "2011523004"))
         mhsList.add(Mahasiswa("Daftar Instansi", "201152300"))
         mhsList.add(Mahasiswa("Daftar Instansi", "2011523009"))
@@ -51,15 +50,11 @@ class DaftarInstansiFragment : Fragment() {
         adapter = MahasiswaAdapter(mhsList)
         recyclerView.adapter = adapter
 
-//        adapter.onItemClick = {
-//            val intent = Intent(context, ListInstansi::class.java)
-//            startActivity(intent )
-//        }
         adapter.setOnItemClickListener(object : MahasiswaAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
                 val intent = Intent(this@DaftarInstansiFragment.requireContext(), ListInstansi::class.java)
-//                intent.putExtra("nama", mhsList[position].txtTitle)
-//                intent.putExtra("nim", mhsList[position].txtSubTitle)
+                intent.putExtra("nama", mhsList[position].nama)
+                intent.putExtra("nim", mhsList[position].nim)
                 startActivity(intent)
             }
         })

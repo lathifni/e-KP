@@ -22,13 +22,9 @@ class DetailSeminarKP : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_detail_seminar_kp)
-
         binding = ActivityDetailSeminarKpBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setSupportActionBar(binding.toolbar2)
-
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeButtonEnabled(true)
 
@@ -43,7 +39,6 @@ class DetailSeminarKP : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         mhsList = ArrayList()
-
         mhsList.add(Mahasiswa("Lathif Nur Irsyad", "2011523004"))
         mhsList.add(Mahasiswa("Ilham", "2011522019"))
         mhsList.add(Mahasiswa("Dzul Fauzi", "2011522001"))
@@ -62,7 +57,6 @@ class DetailSeminarKP : AppCompatActivity() {
 
         adapter.setOnItemClickListener(object : MahasiswaAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
-
             }
         })
     }
