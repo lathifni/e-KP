@@ -55,7 +55,12 @@ class DaftarMahasiswaKP : AppCompatActivity() {
     }
 
     fun ke_persetujuannilai(view: View) {
+        val bundle : Bundle? = intent.extras
+        val nama = bundle!!.getString("nama")
+        val nim = bundle!!.getString("nim")
         val intent = Intent(this@DaftarMahasiswaKP, PersetujuanNilaiKP::class.java)
+        intent.putExtra("nama", nama)
+        intent.putExtra("nim", nim)
         startActivity(intent)
     }
 

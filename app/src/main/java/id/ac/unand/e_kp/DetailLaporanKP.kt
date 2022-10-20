@@ -17,6 +17,13 @@ class DetailLaporanKP : AppCompatActivity() {
         setSupportActionBar(binding.toolbar2)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeButtonEnabled(true)
+
+        val bundle : Bundle? = intent.extras
+        val nama = bundle!!.getString("nama")
+        val nim = bundle!!.getString("nim")
+
+        binding.textView26.text = nama
+        binding.textView27.text = nim
     }
     override fun onSupportNavigateUp(): Boolean {
         finish()

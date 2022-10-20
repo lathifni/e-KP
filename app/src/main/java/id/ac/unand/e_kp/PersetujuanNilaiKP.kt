@@ -2,46 +2,64 @@ package id.ac.unand.e_kp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import id.ac.unand.e_kp.databinding.ActivityDetailSeminarKpBinding
+import id.ac.unand.e_kp.adapter.PersetujuanNilaiAdapter
 import id.ac.unand.e_kp.databinding.ActivityPersetujuanNilaiKpBinding
+import id.ac.unand.e_kp.models.PersetujuaanNilai
 import java.util.ArrayList
 
 class PersetujuanNilaiKP : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private  lateinit var binding: ActivityPersetujuanNilaiKpBinding
     private lateinit var recyclerView: RecyclerView
-    private lateinit var mhsList: ArrayList<NamaMhs>
-    private lateinit var adapter: MyAdapter
+    private lateinit var nilaiList: ArrayList<PersetujuaanNilai>
+    private lateinit var adapter: PersetujuanNilaiAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityPersetujuanNilaiKpBinding.inflate(layoutInflater)
+        var binding = ActivityPersetujuanNilaiKpBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        recyclerView = findViewById(R.id.persetujuan_nilai)
         setSupportActionBar(binding.toolbar3)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeButtonEnabled(true)
-
-        recyclerView = findViewById(R.id.recycler_view7)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        mhsList = ArrayList()
+        val bundle: Bundle? = intent.extras
+        val nama = bundle?.getString("nama")
+        val nim = bundle?.getString("nim")
 
-        mhsList.add(NamaMhs(R.drawable.ic_persetujuan, "nilai 1", "20/09/2022"))
-        mhsList.add(NamaMhs(R.drawable.ic_persetujuan, "nilai 2", "21/09/2022"))
-        mhsList.add(NamaMhs(R.drawable.ic_persetujuan, "nilai 3", "22/09/2022"))
-        mhsList.add(NamaMhs(R.drawable.ic_persetujuan, "nilai 4", "20/09/2022"))
+        binding.textView18.text = nama
+        binding.textView19.text = nim
 
-        adapter = MyAdapter(mhsList)
+        nilaiList = ArrayList()
+
+        nilaiList.add(PersetujuaanNilai("nilai 1", false))
+        nilaiList.add(PersetujuaanNilai("nilai 2", false))
+        nilaiList.add(PersetujuaanNilai("nilai 3", false))
+        nilaiList.add(PersetujuaanNilai("nilai 4", false))
+        nilaiList.add(PersetujuaanNilai("nilai 5", false))
+        nilaiList.add(PersetujuaanNilai("nilai 6", false))
+        nilaiList.add(PersetujuaanNilai("nilai 7", false))
+
+
+        adapter = PersetujuanNilaiAdapter(nilaiList)
         recyclerView.adapter = adapter
 
-        adapter.setOnItemClickListener(object : MyAdapter.onItemClickListener{
+        binding.button13.isEnabled = false
+        adapter.setOnItemClickListener(object : PersetujuanNilaiAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
+                binding.button13.isEnabled = true
+                binding.button13.setOnClickListener {
+                    Toast.makeText(this@PersetujuanNilaiKP, "Nilai Disetujui", Toast.LENGTH_SHORT)
+                        .show()
+                }
             }
         })
     }
+
     override fun onSupportNavigateUp(): Boolean {
         finish()
         return true
