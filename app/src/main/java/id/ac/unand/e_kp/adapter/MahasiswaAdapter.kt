@@ -4,11 +4,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.view.menu.ListMenuItemView
 import androidx.recyclerview.widget.RecyclerView
 import id.ac.unand.e_kp.R
 import id.ac.unand.e_kp.models.Mahasiswa
 
-class MahasiswaAdapter(private val mhsList: ArrayList<Mahasiswa>) : RecyclerView.Adapter<MahasiswaAdapter.mhsListViewHolder>(){
+class MahasiswaAdapter(private val mhsList: ArrayList<Mahasiswa>) : RecyclerView.Adapter<MahasiswaAdapter.mhsListViewHolder>() {
     private lateinit var myListener : onItemClickListener
 
     interface onItemClickListener{
@@ -43,4 +44,5 @@ class MahasiswaAdapter(private val mhsList: ArrayList<Mahasiswa>) : RecyclerView
             }
         }
     }
+
 }
