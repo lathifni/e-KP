@@ -41,20 +41,20 @@ class SelesaiKPFragment : Fragment() {
 
         mhsListSelesai = ArrayList()
 
-        mhsListSelesai.add(MahasiswaSelesai("Selesai KP", "2011523004"))
-        mhsListSelesai.add(MahasiswaSelesai("Selesai KP", "201152300"))
-        mhsListSelesai.add(MahasiswaSelesai("Selesai KP", "2011523009"))
-        mhsListSelesai.add(MahasiswaSelesai("Selesai KP", "2011523001"))
-        mhsListSelesai.add(MahasiswaSelesai("Selesai KP", "2011523004"))
+        mhsListSelesai.add(MahasiswaSelesai("Ilham", "2011522019"))
+        mhsListSelesai.add(MahasiswaSelesai("Dzul Fauzi", "2011522001"))
+        mhsListSelesai.add(MahasiswaSelesai("Lathif Nur Irsyad", "201152300"))
+        mhsListSelesai.add(MahasiswaSelesai("Fikri", "2011523000"))
+        mhsListSelesai.add(MahasiswaSelesai("lyl", "2011522029"))
 
         adapter = MahasiswaSelesaiAdapter(mhsListSelesai)
         recyclerView.adapter = adapter
 
         adapter.setOnItemClickListener(object : MahasiswaSelesaiAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
-                val intent = Intent(this@SelesaiKPFragment.requireContext(), ListInstansi::class.java)
-//                intent.putExtra("nama", mhsList[position].txtTitle)
-//                intent.putExtra("nim", mhsList[position].txtSubTitle)
+                val intent = Intent(this@SelesaiKPFragment.requireContext(), DetailLaporanKP::class.java)
+                intent.putExtra("nama", mhsListSelesai[position].nama)
+                intent.putExtra("nim", mhsListSelesai[position].nim)
                 startActivity(intent)
             }
         })
