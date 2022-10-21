@@ -25,9 +25,10 @@ class PersetujuanNilaiAdapter (private val persetujuanNilaiList : ArrayList<Pers
     }
 
     inner class persetujuanNilaiViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val nama : RadioButton = itemView.findViewById(R.id.radioButton)
+        val radioButton : RadioButton = itemView.findViewById(R.id.radioButton)
+        val nama : TextView = itemView.findViewById(R.id.textView29)
         init {
-            nama.setOnClickListener {
+            radioButton.setOnClickListener {
                 handleRadioButtonChecks(absoluteAdapterPosition, myListener)
             }
         }
@@ -50,11 +51,12 @@ class PersetujuanNilaiAdapter (private val persetujuanNilaiList : ArrayList<Pers
     override fun onBindViewHolder(holder: persetujuanNilaiViewHolder, position: Int) {
         val currentPosition = persetujuanNilaiList[position]
         holder.nama.setText(currentPosition.nama)
+//        holder.radioButton.setText(currentPosition.nama)
         if (isNewRadioButtonChecked){
-            holder.nama.isChecked = currentPosition.isSelected
+            holder.radioButton.isChecked = currentPosition.isSelected
         }else{
             if (holder.absoluteAdapterPosition == 0){
-                holder.nama.isChecked = false
+                holder.radioButton.isChecked = false
                 lastCheckedPosition = 0
             }
         }
