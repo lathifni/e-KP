@@ -3,13 +3,19 @@ package id.ac.unand.e_kp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import id.ac.unand.e_kp.adapter.LogbookAdapter
+import id.ac.unand.e_kp.adapter.MahasiswaAdapter
 import id.ac.unand.e_kp.databinding.ActivityKonfirmasiBatalKpBinding
 import id.ac.unand.e_kp.databinding.ActivityLogbookKpBinding
+import id.ac.unand.e_kp.databinding.FragmentLogbookHarianBinding
 import id.ac.unand.e_kp.models.Logbook
+import id.ac.unand.e_kp.models.Mahasiswa
 import java.util.ArrayList
 
 class LogbookKP : AppCompatActivity() {
@@ -61,6 +67,10 @@ class LogbookKP : AppCompatActivity() {
 
         adapter.setOnItemClickListener(object : LogbookAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
+                val intent = Intent(this@LogbookKP, DetailLogbook::class.java)
+                intent.putExtra("kegiatan", mhsLogbook[position].kegiatan)
+                intent.putExtra("tanggal", mhsLogbook[position].tanggal)
+                startActivity(intent)
             }
         })
     }

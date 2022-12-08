@@ -11,8 +11,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import id.ac.unand.e_kp.*
+import id.ac.unand.e_kp.adapter.InstansiAdapter
 import id.ac.unand.e_kp.adapter.MahasiswaAdapter
 import id.ac.unand.e_kp.databinding.FragmentDaftarInstansiBinding
+import id.ac.unand.e_kp.models.Instansi
 import id.ac.unand.e_kp.models.Mahasiswa
 import java.util.ArrayList
 
@@ -22,8 +24,8 @@ class DaftarInstansiFragment : Fragment() {
     private val binding get() = _binding!!
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var mhsList: ArrayList<Mahasiswa>
-    private lateinit var adapter: MahasiswaAdapter
+    private lateinit var intList: ArrayList<Instansi>
+    private lateinit var adapter: InstansiAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -40,21 +42,20 @@ class DaftarInstansiFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         recyclerView.layoutManager = LinearLayoutManager(context)
 
-        mhsList = ArrayList()
-        mhsList.add(Mahasiswa("Daftar Instansi", "2011523004"))
-        mhsList.add(Mahasiswa("Daftar Instansi", "201152300"))
-        mhsList.add(Mahasiswa("Daftar Instansi", "2011523009"))
-        mhsList.add(Mahasiswa("Daftar Instansi", "2011523001"))
-        mhsList.add(Mahasiswa("Daftar Instansi", "2011523004"))
+        intList = ArrayList()
+        intList.add(Instansi("PT. MULTIPOLAR"))
+        intList.add(Instansi("PT. Telkom"))
+        intList.add(Instansi("Kominfo"))
+        intList.add(Instansi("Mediatama"))
+        intList.add(Instansi("Dinas Kesehatan Sumbar"))
 
-        adapter = MahasiswaAdapter(mhsList)
+        adapter = InstansiAdapter(intList)
         recyclerView.adapter = adapter
 
-        adapter.setOnItemClickListener(object : MahasiswaAdapter.onItemClickListener{
+        adapter.setOnItemClickListener(object : InstansiAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
                 val intent = Intent(this@DaftarInstansiFragment.requireContext(), ListInstansi::class.java)
-                intent.putExtra("nama", mhsList[position].nama)
-                intent.putExtra("nim", mhsList[position].nim)
+                intent.putExtra("nama", intList[position].nama)
                 startActivity(intent)
             }
         })
