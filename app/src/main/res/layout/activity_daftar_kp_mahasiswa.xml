@@ -8,14 +8,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="370dp"
-        android:layout_height="440dp"
+        android:layout_height="375dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/costum_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints">
 
@@ -23,80 +23,80 @@
             android:id="@+id/button5"
             android:layout_width="323dp"
             android:layout_height="52dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
             android:background="@drawable/costum_button"
             android:backgroundTint="@color/abu_abu"
-            android:text="Pembimbing KP"
             android:onClick="ke_pembimbingkp"
+            android:text="Pembimbing KP"
             android:textColor="@color/black"
             android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/button6"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/button6"
             android:layout_width="323dp"
             android:layout_height="52dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginBottom="15dp"
             android:background="@drawable/costum_button"
             android:backgroundTint="@color/abu_abu"
-            android:text="Seminar KP"
             android:onClick="ke_seminar"
+            android:text="Seminar KP"
             android:textColor="@color/black"
             android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/button7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.51"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button5" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/button7"
             android:layout_width="323dp"
             android:layout_height="52dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginBottom="15dp"
             android:background="@drawable/costum_button"
             android:backgroundTint="@color/abu_abu"
-            android:text="Persetujuan Nilai KP"
             android:onClick="ke_persetujuannilai"
+            android:text="Persetujuan Nilai KP"
             android:textColor="@color/black"
             android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/button8"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.51"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button6" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/button8"
             android:layout_width="323dp"
             android:layout_height="52dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginBottom="30dp"
             android:background="@drawable/costum_button"
             android:backgroundTint="@color/hijau"
-            android:text="Logbook KP"
             android:onClick="ke_logbook"
+            android:text="Logbook KP"
             android:textColor="@color/black"
             android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/button9"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.51"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button7" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/button9"
             android:layout_width="323dp"
             android:layout_height="52dp"
-            android:layout_marginTop="52dp"
+            android:layout_marginBottom="15dp"
             android:background="@drawable/costum_button"
             android:backgroundTint="@color/merah"
-            android:text="Batalkan KP"
             android:onClick="ke_konfirmasikp"
+            android:text="Batalkan KP"
             android:textColor="@color/black"
             android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.51"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button8" />
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.appbar.AppBarLayout
@@ -130,7 +130,7 @@
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="130dp"
-        android:layout_height="105dp"
+        android:layout_height="90dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -142,27 +142,88 @@
         android:id="@+id/textHeadingNama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="65dp"
         android:text="Ilham"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/textView28"
+        app:layout_constraintTop_toTopOf="@+id/textView28"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textHeadingNim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="7.5dp"
         android:text="2011522019"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textHeadingNama"
+        app:layout_constraintStart_toStartOf="@+id/textHeadingNama"
+        app:layout_constraintTop_toTopOf="@+id/textView31"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:text="Nama:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="NIM:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textView28"
+        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Perusahaan:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textView31"
+        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Jadwal KP:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textView32"
+        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Multipolar"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textHeadingNim"
+        app:layout_constraintTop_toTopOf="@+id/textView32" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2 Januari - 6 Febaruari"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/textView33"
+        app:layout_constraintTop_toTopOf="@+id/textView34" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
