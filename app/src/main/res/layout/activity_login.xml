@@ -42,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/usernameET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="35dp"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/passwordET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="35dp"
@@ -69,20 +69,19 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/usernameET" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnLogin"
         android:layout_width="230dp"
         android:layout_height="60dp"
         android:layout_marginTop="35dp"
+        android:background="@drawable/costum_button"
         android:text="Login"
         android:textColor="@color/black"
         app:cornerRadius="20dp"
         app:iconTint="@color/black"
-        android:background="@drawable/costum_button"
-        android:onClick="ke_home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordET" />
 </androidx.constraintlayout.widget.ConstraintLayout>

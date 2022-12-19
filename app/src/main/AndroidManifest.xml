@@ -3,7 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="id.ac.unand.e_kp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,12 +18,6 @@
         tools:targetApi="31">
         <activity
             android:name=".DetailLogbook"
-            android:exported="false" />
-        <activity
-            android:name=".detail_logbook"
-            android:exported="false" />
-        <activity
-            android:name=".LaporanSelesaiKP"
             android:exported="false" />
         <activity
             android:name=".DetailLaporanKP"
@@ -64,23 +61,10 @@
             android:exported="false" />
         <activity
             android:name=".DetailUsulanKP"
-            android:exported="false" /> <!-- <activity -->
-        <!-- android:name=".DaftarKP" -->
-        <!-- android:exported="false" /> -->
-        <!-- <activity -->
-        <!-- android:name=".daftar_kp" -->
-        <!-- android:exported="false" /> -->
-        <!-- <activity -->
-        <!-- android:name=".testing" -->
-        <!-- android:exported="false" /> -->
-        <!-- <activity -->
-        <!-- android:name=".test" -->
-        <!-- android:exported="false" /> -->
+            android:exported="false" />
         <activity
             android:name=".DaftarMahasiswaKP"
-            android:exported="false" /> <!-- <activity -->
-        <!-- android:name=".MahasiswaKP" -->
-        <!-- android:exported="false" /> -->
+            android:exported="false" />
         <activity
             android:name=".UsulanKP"
             android:exported="false" />

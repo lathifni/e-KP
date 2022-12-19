@@ -30,7 +30,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/btnLogout"
                 android:layout_width="230dp"
                 android:layout_height="60dp"
                 android:layout_marginBottom="40dp"

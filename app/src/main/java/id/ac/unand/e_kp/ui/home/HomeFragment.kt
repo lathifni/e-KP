@@ -1,7 +1,11 @@
 package id.ac.unand.e_kp.ui.home
 
+import android.content.Context
+import android.content.Context.MODE_PRIVATE
 import android.content.Intent
+import android.media.MediaCodec.MetricsConstants.MODE
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import id.ac.unand.e_kp.*
 import id.ac.unand.e_kp.adapter.MahasiswaAdapter
+import id.ac.unand.e_kp.databinding.ContentHomeBinding
 //import androidx.lifecycle.ViewModelProvider
 import id.ac.unand.e_kp.databinding.FragmentHomeBinding
 import id.ac.unand.e_kp.models.Mahasiswa
@@ -28,6 +33,7 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
         recyclerView = binding.recyclerView3
@@ -47,6 +53,12 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val sharedPref = requireActivity().applicationContext.getSharedPreferences("sharedPref", Context.MODE_PRIVATE)?:return
+        val token = sharedPref.getString("TOKEN", "")
+        if (token != null) {
+            Log.d("TOKEN : ", token)
+        }
         recyclerView.layoutManager = LinearLayoutManager(context)
 
         mhsList = ArrayList()
