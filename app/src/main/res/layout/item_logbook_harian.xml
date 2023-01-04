@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardElevation="20dp"
-    app:cardCornerRadius="17dp"
-    android:layout_margin="2dp">
+    app:cardBackgroundColor="#FFF8EA"
+    app:cardElevation="7dp"
+    app:cardCornerRadius="14dp"
+    android:layout_margin="6dp"
+    app:layout_marginBaseline="3dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -40,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
-            android:text="Mulai : "
+            android:text="Mulai      : "
             app:layout_constraintStart_toStartOf="@+id/logbookHarianName"
             app:layout_constraintTop_toBottomOf="@+id/logbookHarianName" />
 

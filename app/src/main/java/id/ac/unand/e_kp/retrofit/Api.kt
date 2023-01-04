@@ -1,5 +1,6 @@
 package id.ac.unand.e_kp.retrofit
 
+import id.ac.unand.e_kp.TugasBesarPribadi.response.ListInstansiResponse
 import id.ac.unand.e_kp.TugasBesarPribadi.response.LogbookHarianResponse
 import id.ac.unand.e_kp.response.LoginResponse
 import id.ac.unand.e_kp.response.LogoutResponse
@@ -20,4 +21,7 @@ interface Api {
     @GET("api/daily-logbooks")
 //    fun getLogbookHarian(@Header("Authorization") token: String):Call<ArrayList<LogbookHarianResponse.Logbooks>>
     fun getLogbookHarian(@Header("Authorization") token: String): Call<LogbookHarianResponse>
+
+    @GET("api/internship-agencies")
+    fun getListInstansi(@Header("Authorization") token: String): Call<ListInstansiResponse>
 }
