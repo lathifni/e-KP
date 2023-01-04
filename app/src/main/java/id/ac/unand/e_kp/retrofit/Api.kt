@@ -1,5 +1,6 @@
 package id.ac.unand.e_kp.retrofit
 
+import id.ac.unand.e_kp.TugasBesarPribadi.response.LogbookHarianResponse
 import id.ac.unand.e_kp.response.LoginResponse
 import id.ac.unand.e_kp.response.LogoutResponse
 import retrofit2.Call
@@ -15,4 +16,8 @@ interface Api {
 
     @POST("api/logout")
     fun logout(@Header("Authorization") token: String) : Call<LogoutResponse>
+
+    @GET("api/daily-logbooks")
+//    fun getLogbookHarian(@Header("Authorization") token: String):Call<ArrayList<LogbookHarianResponse.Logbooks>>
+    fun getLogbookHarian(@Header("Authorization") token: String): Call<LogbookHarianResponse>
 }

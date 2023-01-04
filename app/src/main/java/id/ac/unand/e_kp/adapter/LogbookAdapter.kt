@@ -6,9 +6,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import id.ac.unand.e_kp.R
+import id.ac.unand.e_kp.TugasBesarPribadi.response.LogbookHarianResponse
 import id.ac.unand.e_kp.models.Logbook
+import java.util.ArrayList
 
-class LogbookAdapter(private val listLogbook:ArrayList<Logbook>): RecyclerView.Adapter<LogbookAdapter.logbookViewHolder>() {
+class LogbookAdapter(private val listLogbook: ArrayList<Logbook>): RecyclerView.Adapter<LogbookAdapter.logbookViewHolder>() {
     private lateinit var myListener : onItemClickListener
 
     interface onItemClickListener{

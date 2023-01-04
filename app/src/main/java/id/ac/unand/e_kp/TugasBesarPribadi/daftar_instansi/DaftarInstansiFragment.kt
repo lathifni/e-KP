@@ -1,4 +1,4 @@
-package id.ac.unand.e_kp.ui.logbook_harian
+package id.ac.unand.e_kp.TugasBesarPribadi.daftar_instansi
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,28 +11,30 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import id.ac.unand.e_kp.*
+import id.ac.unand.e_kp.adapter.InstansiAdapter
 import id.ac.unand.e_kp.adapter.MahasiswaAdapter
-import id.ac.unand.e_kp.databinding.FragmentLogbookHarianBinding
+import id.ac.unand.e_kp.databinding.FragmentDaftarInstansiBinding
+import id.ac.unand.e_kp.models.Instansi
 import id.ac.unand.e_kp.models.Mahasiswa
 import java.util.ArrayList
 
-class LogbookHarianFragment : Fragment() {
+class DaftarInstansiFragment : Fragment() {
 
-    private var _binding: FragmentLogbookHarianBinding? = null
+    private var _binding: FragmentDaftarInstansiBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var mhsList: ArrayList<Mahasiswa>
-    private lateinit var adapter: MahasiswaAdapter
+    private lateinit var intList: ArrayList<Instansi>
+    private lateinit var adapter: InstansiAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentLogbookHarianBinding.inflate(inflater, container, false)
+        _binding = FragmentDaftarInstansiBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        recyclerView = binding.recyclerView2
+        recyclerView = binding.recyclerView3
         return root
     }
 
@@ -40,22 +42,20 @@ class LogbookHarianFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         recyclerView.layoutManager = LinearLayoutManager(context)
 
-        mhsList = ArrayList()
+        intList = ArrayList()
+        intList.add(Instansi("PT. MULTIPOLAR"))
+        intList.add(Instansi("PT. Telkom"))
+        intList.add(Instansi("Kominfo"))
+        intList.add(Instansi("Mediatama"))
+        intList.add(Instansi("Dinas Kesehatan Sumbar"))
 
-        mhsList.add(Mahasiswa("Ilham", "2011522019"))
-        mhsList.add(Mahasiswa("Dzul Fauzi", "2011521001"))
-        mhsList.add(Mahasiswa("Lathif Nur Irsyad", "2011523009"))
-        mhsList.add(Mahasiswa("Lathif Nur Irsyad", "2011523001"))
-        mhsList.add(Mahasiswa("Lathif Nur Irsyad", "2011523004"))
-
-        adapter = MahasiswaAdapter(mhsList)
+        adapter = InstansiAdapter(intList)
         recyclerView.adapter = adapter
 
-        adapter.setOnItemClickListener(object : MahasiswaAdapter.onItemClickListener{
+        adapter.setOnItemClickListener(object : InstansiAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
-                val intent = Intent(this@LogbookHarianFragment.requireContext(), LogbookKP::class.java)
-                intent.putExtra("nama", mhsList[position].nama)
-                intent.putExtra("nim", mhsList[position].nim)
+                val intent = Intent(this@DaftarInstansiFragment.requireContext(), ListInstansi::class.java)
+                intent.putExtra("nama", intList[position].nama)
                 startActivity(intent)
             }
         })
