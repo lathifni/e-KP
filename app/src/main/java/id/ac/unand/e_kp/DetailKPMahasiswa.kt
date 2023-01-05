@@ -7,10 +7,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import id.ac.unand.e_kp.adapter.MahasiswaAdapter
-import id.ac.unand.e_kp.adapter.MahasiswaSelesaiAdapter
 import id.ac.unand.e_kp.databinding.ActivityDetailKpmahasiswaBinding
-import id.ac.unand.e_kp.databinding.ActivityUsulanKpBinding
-import id.ac.unand.e_kp.databinding.FragmentLogbookHarianBinding
 import id.ac.unand.e_kp.models.Mahasiswa
 import java.util.ArrayList
 

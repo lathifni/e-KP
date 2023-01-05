@@ -15,4 +15,8 @@ interface Api {
 
     @POST("api/logout")
     fun logout(@Header("Authorization") token: String) : Call<LogoutResponse>
+
+    @GET("api/finished-internships")
+    fun getMhsSelesai(@Header("Authorization") token: String): Call<MhsSelesaiResponse>
+
 }
