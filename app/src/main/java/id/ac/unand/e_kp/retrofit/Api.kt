@@ -1,6 +1,7 @@
 package id.ac.unand.e_kp.retrofit
 
 import id.ac.unand.e_kp.TugasBesarDzul.Response.MhsSelesaiResponse
+import id.ac.unand.e_kp.TugasBesarDzul.Response.UsulanResponse
 import id.ac.unand.e_kp.response.LoginResponse
 import id.ac.unand.e_kp.response.LogoutResponse
 import retrofit2.Call
@@ -19,5 +20,8 @@ interface Api {
 
     @GET("api/finished-internships")
     fun getMhsSelesai(@Header("Authorization") token: String): Call<MhsSelesaiResponse>
+
+    @GET("api/internship-proposals")
+    fun getUsulanKP(@Header("Authorization") token: String): Call<UsulanResponse>
 
 }
