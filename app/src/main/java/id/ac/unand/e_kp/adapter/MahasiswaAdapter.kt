@@ -36,8 +36,8 @@ class MahasiswaAdapter(private val mhsList: ArrayList<Mahasiswa>) : RecyclerView
     }
 
     class mhsListViewHolder(itemView: View, listener: onItemClickListener) : RecyclerView.ViewHolder(itemView){
-        val namaMahasiswa : TextView = itemView.findViewById(R.id.textNamaMahasiswa)
-        val nimMahasiswa : TextView = itemView.findViewById(R.id.textNimMahasiswa)
+        val namaMahasiswa : TextView = itemView.findViewById(R.id.tvtext1)
+        val nimMahasiswa : TextView = itemView.findViewById(R.id.tvtext2)
         init {
             itemView.setOnClickListener {
                 listener.onItemClick(absoluteAdapterPosition)

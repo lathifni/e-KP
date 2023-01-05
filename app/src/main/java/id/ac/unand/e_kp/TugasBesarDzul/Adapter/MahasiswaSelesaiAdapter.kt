@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import id.ac.unand.e_kp.R
-import id.ac.unand.e_kp.TugasBesarDzul.response.MhsSelesaiResponse
+import id.ac.unand.e_kp.TugasBesarDzul.Response.MhsSelesaiResponse
 
 class MahasiswaSelesaiAdapter(private val mhsListSelesai: ArrayList<MhsSelesaiResponse.Internships>) : RecyclerView.Adapter<MahasiswaSelesaiAdapter.mhsListSelesaiViewHolder>() {
 

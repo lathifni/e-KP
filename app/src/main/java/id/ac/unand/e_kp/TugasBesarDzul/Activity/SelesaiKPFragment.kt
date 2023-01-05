@@ -13,11 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import id.ac.unand.e_kp.*
 import id.ac.unand.e_kp.TugasBesarDzul.adapter.MahasiswaSelesaiAdapter
-import id.ac.unand.e_kp.TugasBesarDzul.response.MhsSelesaiResponse
-import id.ac.unand.e_kp.TugasBesarPribadi.adapter.ListInstansiAdapter
-import id.ac.unand.e_kp.TugasBesarPribadi.adapter.LogbookHarianAdapter
-import id.ac.unand.e_kp.TugasBesarPribadi.response.ListInstansiResponse
-import id.ac.unand.e_kp.TugasBesarPribadi.response.LogbookHarianResponse
+import id.ac.unand.e_kp.TugasBesarDzul.Response.MhsSelesaiResponse
 import id.ac.unand.e_kp.databinding.FragmentSelesaiKpBinding
 import id.ac.unand.e_kp.retrofit.RetrofitClient
 import retrofit2.Call

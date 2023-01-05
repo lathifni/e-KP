@@ -1,5 +1,6 @@
 package id.ac.unand.e_kp.retrofit
 
+import id.ac.unand.e_kp.TugasBesarDzul.Response.MhsSelesaiResponse
 import id.ac.unand.e_kp.response.LoginResponse
 import id.ac.unand.e_kp.response.LogoutResponse
 import retrofit2.Call
