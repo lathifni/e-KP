@@ -80,7 +80,7 @@
             android:name=".DaftarMahasiswaKP"
             android:exported="false" />
         <activity
-            android:name=".UsulanKP"
+            android:name=".TugasBesarDzul.usulan_kp.UsulanKP"
             android:exported="false" />
         <activity
             android:name=".Home"

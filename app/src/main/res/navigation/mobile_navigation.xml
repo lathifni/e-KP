@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/nav_selesai_kp"
-        android:name="id.ac.unand.e_kp.TugasBesarDzul.Activity.SelesaiKPFragment"
+        android:name="id.ac.unand.e_kp.TugasBesarDzul.mhs_selesai.SelesaiKPFragment"
         android:label="@string/menu_laporan_mahasiswa"
         tools:layout="@layout/fragment_selesai_kp" />
     <fragment

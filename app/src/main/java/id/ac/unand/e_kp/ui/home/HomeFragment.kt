@@ -1,9 +1,7 @@
 package id.ac.unand.e_kp.ui.home
 
 import android.content.Context
-import android.content.Context.MODE_PRIVATE
 import android.content.Intent
-import android.media.MediaCodec.MetricsConstants.MODE
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -13,8 +11,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import id.ac.unand.e_kp.*
-import id.ac.unand.e_kp.adapter.MahasiswaAdapter
-import id.ac.unand.e_kp.databinding.ContentHomeBinding
+import id.ac.unand.e_kp.TugasBesarDzul.usulan_kp.UsulanKP
+import id.ac.unand.e_kp.TugasBesarDzul.Adapter.MahasiswaAdapter
 //import androidx.lifecycle.ViewModelProvider
 import id.ac.unand.e_kp.databinding.FragmentHomeBinding
 import id.ac.unand.e_kp.models.Mahasiswa

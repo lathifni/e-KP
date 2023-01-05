@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TugasBesarDzul.Activity.SelesaiKPFragment">
+    tools:context=".TugasBesarDzul.mhs_selesai.SelesaiKPFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="358dp"
