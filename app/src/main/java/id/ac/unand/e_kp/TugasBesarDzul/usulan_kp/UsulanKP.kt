@@ -30,7 +30,7 @@ class UsulanKP : AppCompatActivity(){
     private lateinit var binding: ActivityUsulanKpBinding
     private lateinit var recyclerView: RecyclerView
     private lateinit var mhsList: ArrayList<Mahasiswa>
-        private lateinit var adapter: MahasiswaAdapter
+    private lateinit var adapter: MahasiswaAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +43,7 @@ class UsulanKP : AppCompatActivity(){
         recyclerView = findViewById(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-       /* mhsList = ArrayList()
+        mhsList = ArrayList()
         mhsList.add(Mahasiswa("Dzul Fauzi", "2011522001"))
         mhsList.add(Mahasiswa("Ilham", "2011522019"))
         mhsList.add(Mahasiswa("Lathif Nur Irsyad", "2011523009"))
@@ -60,50 +60,6 @@ class UsulanKP : AppCompatActivity(){
                 intent.putExtra("nim", mhsList[position].nim)
                 startActivity(intent)
             }
-        })*/
-    }
-
-    fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        getDataFromAPI()
-    }
-
-    private fun getDataFromAPI(){
-        val sharedPref =
-            context?.getSharedPreferences("sharedPref", Context.MODE_PRIVATE) ?: return
-        val token = sharedPref.getString("TOKEN", "")
-        if (token != null) {
-            Log.d("TOKEN LH: ", token)
-        }
-
-        val list = ArrayList<UsulanResponse.Proposals>()
-        recyclerView.setHasFixedSize(true)
-        recyclerView.layoutManager = LinearLayoutManager(context)
-
-        val retrofitClient = RetrofitClient.create()
-        val callData = retrofitClient.getUsulanKP("Bearer $token")
-        callData.enqueue(object : Callback<UsulanResponse> {
-            override fun onResponse(
-                call: Call<UsulanResponse>,
-                response: Response<UsulanResponse>
-            ) {
-
-                val data = response.body()
-                data?.proposals.let {
-                    if (it != null) {
-                        list.addAll(it)
-                    }
-                }
-
-                val adapterGet = MahasiswaAdapter(list)
-                recyclerView.adapter = adapterGet
-            }
-
-            override fun onFailure(call: Call<UsulanResponse>, t: Throwable) {
-                Toast.makeText(context, "Gagal", Toast.LENGTH_SHORT).show()
-                Log.d("throwable", t.toString())
-            }
-
         })
     }
 
