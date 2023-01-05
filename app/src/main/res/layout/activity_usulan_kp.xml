@@ -21,7 +21,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/main_kuning"
             app:popupTheme="@style/Theme.EKP.PopupOverlay"
-            app:title="Usulan KP Terakhir">
+            app:title="Daftar Usulan KP">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -47,8 +47,9 @@
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view"
+            android:id="@+id/recycler_view_usulan"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_usulan_kp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

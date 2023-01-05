@@ -24,34 +24,23 @@
             app:srcCompat="@drawable/ic_person" />
 
         <TextView
-            android:id="@+id/headingNamaDetailUsulan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="40dp"
-            android:text="Nama : Dzul Fauzi"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/headingNimDetailUsulan"
+            android:id="@+id/namaDetailUsulan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
             android:layout_marginTop="20dp"
-            android:text="NIM : 2011521001"
+            android:text="Nama"
             app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/headingNamaDetailUsulan" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textHeadingNama"
+            android:id="@+id/idDetailUsulan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="16dp"
-            android:text="Lokasi : Multipolar"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/headingNimDetailUsulan" />
+            android:layout_marginEnd="30dp"
+            android:text="Id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/namaDetailUsulan" />
 
         <Button
             android:id="@+id/button5"

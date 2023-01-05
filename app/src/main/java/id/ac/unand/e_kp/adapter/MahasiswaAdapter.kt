@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.appcompat.view.menu.ListMenuItemView
 import androidx.recyclerview.widget.RecyclerView
 import id.ac.unand.e_kp.R
 import id.ac.unand.e_kp.models.Mahasiswa
@@ -21,7 +20,7 @@ class MahasiswaAdapter(private val mhsList: ArrayList<Mahasiswa>) : RecyclerView
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): mhsListViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_mahasiswa, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_usulan_kp, parent, false)
         return mhsListViewHolder(view, myListener)
     }
 

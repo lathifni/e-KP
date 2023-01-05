@@ -32,7 +32,7 @@ class Login : AppCompatActivity() {
     }
 
     fun ke_home(view: View) {
-        intent = Intent(this, Home::class.java)
+        intent = Intent(this, PembimbingKP::class.java)
         startActivity(intent)
     }
 

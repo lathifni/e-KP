@@ -1,7 +1,9 @@
 package id.ac.unand.e_kp
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import id.ac.unand.e_kp.databinding.ActivityDetailUsulanKpBinding
@@ -14,12 +16,19 @@ class DetailUsulanKP : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
+        val sharedPref = getSharedPreferences("sharedPref", Context.MODE_PRIVATE) ?: return
+        val token = sharedPref.getString("TOKEN", "")
+        if (token != null) {
+            Log.d("TOKEN LH: ", token)
+        }
+
         val bundle : Bundle? = intent.extras
         val nama = bundle!!.getString("nama")
         val nim = bundle!!.getString("nim")
 
-        binding.headingNamaDetailUsulan.text = "Nama    : " + nama
-        binding.headingNimDetailUsulan.text = "NIM        : " + nim
+        binding.namaDetailUsulan.text = "Nama    : " + nama
+        binding.idDetailUsulan.text = "NIM        : " + nim
 
         binding.button5.setOnClickListener {
             Toast.makeText(this, "Diterima !!! ", Toast.LENGTH_SHORT).show()

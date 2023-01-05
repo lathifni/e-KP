@@ -1,6 +1,8 @@
 package id.ac.unand.e_kp
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.RadioButton
 import android.widget.RadioGroup
@@ -28,6 +30,12 @@ class PembimbingKP : AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeButtonEnabled(true)
 
+        val sharedPref = getSharedPreferences("sharedPref", Context.MODE_PRIVATE) ?: return
+        val token = sharedPref.getString("TOKEN", "")
+        if (token != null) {
+            Log.d("TOKEN LH: ", token)
+        }
+
         val bundle : Bundle? = intent.extras
         val nama = bundle?.getString("nama")
         val nim = bundle?.getString("nim")
@@ -36,10 +44,14 @@ class PembimbingKP : AppCompatActivity() {
         binding.textView8.text = nim
 
         dosenList = ArrayList()
-        dosenList.add(DosenPengampu("Husnil Kamil, MT", false))
-        dosenList.add(DosenPengampu("Ricky Akbar, M.Kom", false))
-        dosenList.add(DosenPengampu("Prof. Surya Afnarius", false))
-        dosenList.add(DosenPengampu("Fajril Akbar, MT", false))
+        dosenList.add(DosenPengampu("Husnil Kamil", false))
+        dosenList.add(DosenPengampu("Hasdi Putra", false))
+        dosenList.add(DosenPengampu("Fajril Akbar", false))
+        dosenList.add(DosenPengampu("Surya Afnarius", false))
+        dosenList.add(DosenPengampu("Meza Silvana", false))
+        dosenList.add(DosenPengampu("Ricky Akbar", false))
+        dosenList.add(DosenPengampu("Haris Suryamen", false))
+        dosenList.add(DosenPengampu("Wahyudi", false))
 
         adapter = DosenPengampuAdapter(dosenList)
         recyclerView.adapter = adapter
@@ -49,7 +61,7 @@ class PembimbingKP : AppCompatActivity() {
             override fun onItemClick(position: Int) {
                 binding.simpanPembimbing.isEnabled = true
                 binding.simpanPembimbing.setOnClickListener {
-                    Toast.makeText(this@PembimbingKP, "Anda Berhasil Memilih "+dosenList[position].nama, Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@PembimbingKP, "Berhasil menentukan pembimbing KP"+dosenList[position].nama, Toast.LENGTH_SHORT).show()
                     binding.textView9.text = dosenList[position].nama
                 }
             }

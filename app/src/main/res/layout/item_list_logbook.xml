@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#FFF8EA"
+    app:cardElevation="7dp"
+    app:cardCornerRadius="14dp"
+    android:layout_margin="6dp"
+    app:layout_marginBaseline="3dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/idLogbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/internshipLogbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="44dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView46"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="Mulai      : "
+            app:layout_constraintStart_toStartOf="@+id/idLogbook"
+            app:layout_constraintTop_toBottomOf="@+id/idLogbook" />
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="Update : "
+            app:layout_constraintStart_toStartOf="@+id/textView46"
+            app:layout_constraintTop_toBottomOf="@+id/textView46" />
+
+        <TextView
+            android:id="@+id/mulaiLogbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:text="TextView"
+            app:layout_constraintStart_toEndOf="@+id/textView47"
+            app:layout_constraintTop_toBottomOf="@+id/idLogbook" />
+
+        <TextView
+            android:id="@+id/updateLogbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@+id/mulaiLogbook"
+            app:layout_constraintStart_toEndOf="@+id/textView46"
+            app:layout_constraintTop_toBottomOf="@+id/idLogbook" />
+
+        <TextView
+            android:id="@+id/dateLogbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="@+id/internshipLogbook"
+            app:layout_constraintTop_toBottomOf="@+id/internshipLogbook" />
+
+        <TextView
+            android:id="@+id/statusLogbook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="@+id/internshipLogbook"
+            app:layout_constraintTop_toBottomOf="@+id/dateLogbook" />
+
+        <TextView
+            android:id="@+id/activitiesLogbook"
+            android:layout_width="389dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="8dp"
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView47"
+            app:layout_constraintTop_toBottomOf="@+id/textView47"
+            app:layout_constraintVertical_bias="0.139" />
+
+        <TextView
+            android:id="@+id/noteLogbook"
+            android:layout_width="389dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="8dp"
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/activitiesLogbook"
+            app:layout_constraintTop_toBottomOf="@+id/activitiesLogbook" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

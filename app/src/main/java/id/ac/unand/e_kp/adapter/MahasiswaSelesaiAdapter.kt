@@ -20,7 +20,7 @@ class MahasiswaSelesaiAdapter(private val mhsListSelesai: ArrayList<MahasiswaSel
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): mhsListSelesaiViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_mahasiswa, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_usulan_kp, parent, false)
         return mhsListSelesaiViewHolder(view, myListener)
     }
 
@@ -43,5 +43,4 @@ class MahasiswaSelesaiAdapter(private val mhsListSelesai: ArrayList<MahasiswaSel
             }
         }
     }
-
 }
