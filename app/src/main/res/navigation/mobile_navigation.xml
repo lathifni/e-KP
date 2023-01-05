@@ -18,13 +18,13 @@
         tools:layout="@layout/fragment_selesai_kp" />
     <fragment
         android:id="@+id/nav_logbook"
-        android:name="id.ac.unand.e_kp.TugasBesarPribadi.logbook_harian.LogbookHarianFragment"
+        android:name="id.ac.unand.e_kp.TugasBesarPribadi.LogbookHarianFragment"
         android:label="@string/menu_logbook_harian"
         tools:layout="@layout/fragment_logbook_harian" />
 
     <fragment
         android:id="@+id/nav_daftar_instansi"
-        android:name="id.ac.unand.e_kp.TugasBesarPribadi.daftar_instansi.DaftarInstansiFragment"
+        android:name="id.ac.unand.e_kp.TugasBesarPribadi.DaftarInstansiFragment"
         android:label="@string/menu_daftar_instansi"
         tools:layout="@layout/fragment_daftar_instansi" />
 </navigation>

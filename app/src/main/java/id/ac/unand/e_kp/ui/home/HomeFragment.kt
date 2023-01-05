@@ -1,7 +1,6 @@
 package id.ac.unand.e_kp.ui.home
 
 import android.content.Context
-import android.content.Context.MODE_PRIVATE
 import android.content.Intent
 import android.media.MediaCodec.MetricsConstants.MODE
 import android.os.Bundle

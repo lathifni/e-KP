@@ -1,4 +1,4 @@
-package id.ac.unand.e_kp.TugasBesarPribadi.daftar_instansi
+package id.ac.unand.e_kp.TugasBesarPribadi
 
 import android.content.Context
 import android.content.Intent
@@ -11,13 +11,10 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import id.ac.unand.e_kp.*
 import id.ac.unand.e_kp.TugasBesarPribadi.adapter.ListInstansiAdapter
 import id.ac.unand.e_kp.TugasBesarPribadi.response.ListInstansiResponse
-import id.ac.unand.e_kp.adapter.MahasiswaAdapter
+import id.ac.unand.e_kp.TugasBesarPribadi.room.RoomDb
 import id.ac.unand.e_kp.databinding.FragmentDaftarInstansiBinding
-import id.ac.unand.e_kp.models.Instansi
-import id.ac.unand.e_kp.models.Mahasiswa
 import id.ac.unand.e_kp.retrofit.RetrofitClient
 import retrofit2.Call
 import retrofit2.Callback
@@ -28,10 +25,7 @@ class DaftarInstansiFragment : Fragment() {
 
     private var _binding: FragmentDaftarInstansiBinding? = null
     private val binding get() = _binding!!
-
     private lateinit var recyclerView: RecyclerView
-//    private lateinit var intList: ArrayList<Instansi>
-//    private lateinit var adapter: ListInstansiAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -48,25 +42,10 @@ class DaftarInstansiFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         getDataFromAPI()
-//        recyclerView.layoutManager = LinearLayoutManager(context)
-//
-//        intList = ArrayList()
-//        intList.add(Instansi("PT. MULTIPOLAR"))
-//        intList.add(Instansi("PT. Telkom"))
-//        intList.add(Instansi("Kominfo"))
-//        intList.add(Instansi("Mediatama"))
-//        intList.add(Instansi("Dinas Kesehatan Sumbar"))
-//
-//        adapter = InstansiAdapter(intList)
-//        recyclerView.adapter = adapter
-//
-//        adapter.setOnItemClickListener(object : InstansiAdapter.onItemClickListener{
-//            override fun onItemClick(position: Int) {
-//                val intent = Intent(this@DaftarInstansiFragment.requireContext(), ListInstansi::class.java)
-//                intent.putExtra("nama", intList[position].nama)
-//                startActivity(intent)
-//            }
-//        })
+        binding.roomBtn.setOnClickListener {
+            val intent = Intent(activity?.applicationContext, RoomDb::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun getDataFromAPI(){
@@ -77,7 +56,7 @@ class DaftarInstansiFragment : Fragment() {
             Log.d("TOKEN LH: ", token)
         }
 
-        val list = ArrayList<ListInstansiResponse.Companies>()
+        var list = ArrayList<ListInstansiResponse.Companies>()
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(context)
 
@@ -88,9 +67,8 @@ class DaftarInstansiFragment : Fragment() {
                 call: Call<ListInstansiResponse>,
                 response: Response<ListInstansiResponse>
             ) {
-                Toast.makeText(context, "Berhasil nih", Toast.LENGTH_SHORT).show()
-                Log.d("Hasilnya nih", response.body().toString())
                 val data = response.body()
+                Log.d("test", data.toString())
                 data?.companies.let {
                     if (it != null) {
                         list.addAll(it)
@@ -98,19 +76,26 @@ class DaftarInstansiFragment : Fragment() {
                 }
                 val adapterGet = ListInstansiAdapter(list)
                 recyclerView.adapter = adapterGet
+                adapterGet!!.notifyDataSetChanged()
 
                 adapterGet.setOnItemClickListener(object : ListInstansiAdapter.onItemClickListener {
                     override fun onItemClick(position: Int) {
-                        Toast.makeText(context, "tombol edit", Toast.LENGTH_SHORT).show()
+                        var a = list[position]
+                        var name = a.name
+                        var address = a.address
+                        Log.d("extras", a.toString())
+                        var id = position+1
+                        val intent = Intent(activity?.applicationContext, AccRejcInstansi::class.java)
+                        intent.putExtra("id", id)
+                        intent.putExtra("name", name)
+                        intent.putExtra("address", address)
+                        startActivity(intent)
                     }
-
                 })
             }
-
             override fun onFailure(call: Call<ListInstansiResponse>, t: Throwable) {
-                Toast.makeText(context, "Yah gagal", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "gagal", Toast.LENGTH_SHORT).show()
             }
-
         })
     }
 

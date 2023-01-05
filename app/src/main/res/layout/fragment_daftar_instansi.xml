@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TugasBesarPribadi.daftar_instansi.DaftarInstansiFragment">
+    tools:context=".TugasBesarPribadi.DaftarInstansiFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="358dp"
         android:layout_height="596dp"
         android:layout_marginTop="50dp"
@@ -32,4 +33,15 @@
             app:layout_constraintVertical_bias="0.0"
             tools:listitem="@layout/item_instansi" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/roomBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/costum_button"
+        android:layout_marginTop="17dp"
+        android:text="Room db"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

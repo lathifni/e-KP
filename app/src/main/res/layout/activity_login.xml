@@ -48,7 +48,7 @@
         android:layout_margin="35dp"
         android:background="@drawable/edit_text_login"
         android:elevation="7dp"
-        android:hint="Email"
+        android:hint="Username"
         android:inputType="textEmailAddress"
         android:padding="15dp"
         android:textColor="@color/black"

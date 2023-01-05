@@ -45,7 +45,6 @@ class Login : AppCompatActivity() {
     }fun login(){
         val usernameForm: EditText = findViewById(R.id.usernameET)
         val passwordForm: EditText = findViewById(R.id.passwordET)
-
         val username = usernameForm.text.toString().trim()
         val password = passwordForm.text.toString().trim()
 
@@ -63,20 +62,16 @@ class Login : AppCompatActivity() {
                         putString("TOKEN", token)
                         apply()
                     }
-                    Log.d("Data",response.body().toString())
                     val name = response.body()?.user?.nama!!.toString()
                     Toast.makeText(applicationContext, "Selamat datang $name", Toast.LENGTH_SHORT).show()
                     ke_home(View(this@Login))
                 }else{
                     Toast.makeText(applicationContext, "Masukkan Username dan password yang benar", Toast.LENGTH_SHORT).show()
-                    Log.d("Data",response.body().toString())
                 }
             }
-
             override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
                 Toast.makeText(applicationContext, t.message, Toast.LENGTH_SHORT).show()
             }
-
         })
     }
 }

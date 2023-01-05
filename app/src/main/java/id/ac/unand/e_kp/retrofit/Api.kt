@@ -2,9 +2,11 @@ package id.ac.unand.e_kp.retrofit
 
 import id.ac.unand.e_kp.TugasBesarPribadi.response.ListInstansiResponse
 import id.ac.unand.e_kp.TugasBesarPribadi.response.LogbookHarianResponse
+import id.ac.unand.e_kp.TugasBesarPribadi.response.PatchInstansiResponse
 import id.ac.unand.e_kp.response.LoginResponse
 import id.ac.unand.e_kp.response.LogoutResponse
 import retrofit2.Call
+import retrofit2.Callback
 import retrofit2.http.*
 
 interface Api {
@@ -24,4 +26,11 @@ interface Api {
 
     @GET("api/internship-agencies")
     fun getListInstansi(@Header("Authorization") token: String): Call<ListInstansiResponse>
+
+    @FormUrlEncoded
+    @PATCH("api/internship-agencies/{id}")
+    fun patchAccRejcInstansi(
+        @Header("Authorization") token: String,
+        @Path("id") id: Int,
+        @Field("status") status: Int) : Call<PatchInstansiResponse>
 }

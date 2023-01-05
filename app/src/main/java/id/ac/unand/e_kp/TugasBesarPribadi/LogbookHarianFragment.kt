@@ -1,4 +1,4 @@
-package id.ac.unand.e_kp.TugasBesarPribadi.logbook_harian
+package id.ac.unand.e_kp.TugasBesarPribadi
 
 import android.content.Context
 import android.os.Bundle
@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import id.ac.unand.e_kp.TugasBesarPribadi.adapter.LogbookHarianAdapter
 import id.ac.unand.e_kp.TugasBesarPribadi.response.LogbookHarianResponse
-import id.ac.unand.e_kp.adapter.LogbookAdapter
 import id.ac.unand.e_kp.databinding.FragmentLogbookHarianBinding
 import id.ac.unand.e_kp.retrofit.RetrofitClient
 import retrofit2.Call
@@ -21,13 +20,9 @@ import retrofit2.Response
 import kotlin.collections.ArrayList
 
 class LogbookHarianFragment : Fragment() {
-
     private var _binding: FragmentLogbookHarianBinding? = null
     private val binding get() = _binding!!
-
     lateinit var recyclerView: RecyclerView
-//    private lateinit var mhsList: ArrayList<Mahasiswa>
-//    private lateinit var adapter: MahasiswaAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
